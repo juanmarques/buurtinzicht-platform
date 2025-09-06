@@ -1,0 +1,120 @@
+📑 Neighborhood Insights System — Descriptive Document
+
+1. Data Sources in Belgium
+
+✅ Free / API-based (official, open data)
+	•	REIP (Real Estate Information Platform, Vlaanderen)
+	•	Aggregates official data on building permits, flood zones, soil quality, EPC (energy labels), heritage, mobility plans.
+	•	Accessible via Athumi APIs (requires account, but official and free for many datasets).
+	•	Statbel (Belgian Statistical Office)
+	•	Crime rates, demographic stats, income per municipality, education, mobility.
+	•	Open datasets via API + CSV downloads.
+	•	IRISnet / Brussels Open Data & Data Vlaanderen
+	•	Noise pollution maps, traffic, green space, mobility plans.
+	•	Real-time datasets like traffic flow, parking availability.
+	•	VMM (Flemish Environment Agency)
+	•	Air quality & water quality, flood risk data.
+	•	APIs for real-time pollution levels.
+	•	SPF Finance (Cadastre)
+	•	Average cadastral income, land registry (some data open, some via request).
+
+⚠️ Scraping or Indirect Integration (grey zone or paywall)
+	•	Immoweb, Zimmo, Logic-Immo → property listings & comps.
+	•	No free API. Scraping technically possible but against ToS → risk.
+	•	Alternative: partner with Realo API (they sell access to valuation & comps).
+	•	Private services (e.g., Realo, Rock.Estate, Smartblock Market Explorer)
+	•	APIs exist but are paid commercial products.
+	•	Community inputs (reviews, photos, surveys, noise measurements)
+	•	You’d have to collect these yourself via platform UX.
+
+2. Business Case
+
+Problem
+
+Belgian property buyers & renters lack consolidated, predictive insights about neighborhoods. They risk buying/renting in areas with hidden downsides (noise, flood risk, unsafe streets, declining values).
+
+Solution
+
+A Neighborhood Insights Platform:
+	•	Aggregates public & private data into a Neighborhood Scorecard.
+	•	Adds predictive analytics (price trends, risk factors).
+	•	Optionally, crowdsources resident reviews for context.
+	•	Provides instant PDF reports and alerts.
+
+Target Users
+	•	End buyers/renters (B2C): Want peace of mind before committing.
+	•	Agents/landlords (B2B): Want richer listings and credibility.
+	•	Municipalities/insurers (B2G): Interested in spatial planning, risk modeling.
+
+Monetization
+	•	B2C:
+	•	Free “light” scorecard.
+	•	Paid report per property (€49) or subscription (€9.99–15/mo during house hunting).
+	•	B2B:
+	•	API access for agencies/developers.
+	•	Subscription for unlimited property/neighborhood reports.
+	•	Future:
+	•	White-label reports for agencies.
+	•	Gov/insurance licensing.
+
+3. BDD (Business-Driven Development) Scenarios
+
+Feature: Generate neighborhood scorecard
+	•	Scenario 1:
+	•	Given I enter an address
+	•	When I request a report
+	•	Then I see scores for safety, mobility, noise, flood risk, demographics, and price trends.
+
+Feature: Predictive analytics
+	•	Scenario 2:
+	•	Given I view a neighborhood’s price trend
+	•	When I request a projection
+	•	Then I get an estimated % increase/decrease over 5 years with confidence intervals.
+
+Feature: Alerts
+	•	Scenario 3:
+	•	Given I subscribed to neighborhood updates
+	•	When new data (crime spike, mobility plan, zoning change) appears
+	•	Then I receive a push/email alert.
+
+Feature: Resident reviews
+	•	Scenario 4:
+	•	Given I live in the area
+	•	When I submit a review (“good for families, noisy weekends”)
+	•	Then it appears after moderation and influences the social score.
+
+4. Use Cases
+
+UC-1: Buyer requests property report
+	•	Actors: Buyer (primary), System (secondary)
+	•	Flow:
+	•	Buyer enters address.
+	•	System queries REIP, Statbel, VMM APIs.
+	•	System enriches with scraped comps (optional).
+	•	Buyer sees free “basic” score (A–E).
+	•	Buyer pays for full PDF.
+
+UC-2: Agent enriches listing
+	•	Actors: Agent (primary)
+	•	Flow:
+	•	Agent uploads listing via dashboard/API.
+	•	System auto-generates scorecard + charts.
+	•	Agent embeds them into listing, boosting trust.
+
+UC-3: Municipality license
+	•	Actors: City planner, Insurer
+	•	Flow:
+	•	Planner accesses dashboard of all neighborhoods.
+	•	Views evolution of noise, demographics, flood risks.
+	•	Exports to Excel/PDF for planning reports.
+
+5. Longevity Considerations
+	•	Data backbone: Build modular API connectors (REIP, Statbel, VMM). Stable long-term because governments keep improving open data.
+	•	Scalability: Start Belgium → expand to Netherlands, France, Germany (all have open spatial data initiatives).
+	•	Defensibility: Over time, the crowdsourced reviews + proprietary predictive models are your moat (can’t be copied easily).
+	•	Tech stack longevity:
+	•	Back-end: Java/Spring (your comfort zone).
+	•	Front-end: React/Angular for dashboards.
+	•	Storage: PostGIS (spatial DB).
+	•	AI/ML: Python pipeline for price predictions.
+
