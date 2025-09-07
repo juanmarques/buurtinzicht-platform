@@ -1,0 +1,60 @@
+{
+  "name": "buurtinzicht-platform",
+  "version": "1.0.0",
+  "description": "Neighborhood Insights System for Belgium",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "docker-compose up -d",
+    "build": "./scripts/build.sh",
+    "test": "./scripts/test.sh",
+    "deploy": "./scripts/deploy.sh",
+    "clean": "docker-compose down && docker system prune -f",
+    "setup": "./scripts/setup.sh"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.java": [
+      "mvn spotless:apply"
+    ],
+    "*.py": [
+      "black .",
+      "ruff --fix ."
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanmarques/buurtinzicht-platform.git"
+  },
+  "keywords": [
+    "neighborhood-analysis",
+    "belgium",
+    "real-estate",
+    "geospatial",
+    "microservices"
+  ],
+  "author": "Juan Marques",
+  "license": "MIT"
+}
