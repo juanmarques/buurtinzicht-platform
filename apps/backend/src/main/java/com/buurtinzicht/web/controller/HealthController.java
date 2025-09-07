@@ -28,7 +28,7 @@ public class HealthController implements HealthIndicator {
     )
     @ApiResponse(responseCode = "200", description = "Application is healthy")
     @GetMapping
-    public ResponseEntity<Map<String, Object>> health() {
+    public ResponseEntity<Map<String, Object>> status() {
         return ResponseEntity.ok(Map.of(
             "status", "UP",
             "timestamp", Instant.now(),
