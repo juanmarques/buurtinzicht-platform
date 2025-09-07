@@ -1,0 +1,176 @@
+version: '3.8'
+
+services:
+  # PostgreSQL with PostGIS for spatial data
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: buurtinzicht-postgres
+    environment:
+      POSTGRES_DB: buurtinzicht
+      POSTGRES_USER: buurtinzicht
+      POSTGRES_PASSWORD: buurtinzicht123
+      POSTGRES_MULTIPLE_EXTENSIONS: postgis
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infrastructure/sql/init:/docker-entrypoint-initdb.d
+    networks:
+      - buurtinzicht-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U buurtinzicht -d buurtinzicht"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis for caching and session management
+  redis:
+    image: redis:7.2-alpine
+    container_name: buurtinzicht-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass redis123
+    volumes:
+      - redis_data:/data
+    networks:
+      - buurtinzicht-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Apache Kafka for event streaming
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: buurtinzicht-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - buurtinzicht-network
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: buurtinzicht-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    networks:
+      - buurtinzicht-network
+    healthcheck:
+      test: ["CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Elasticsearch for full-text search
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: buurtinzicht-elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=buurtinzicht-cluster
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - buurtinzicht-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Keycloak for authentication
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    container_name: buurtinzicht-keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin123
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+      KC_DB_USERNAME: buurtinzicht
+      KC_DB_PASSWORD: buurtinzicht123
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: start-dev
+    networks:
+      - buurtinzicht-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health/ready || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Prometheus for monitoring
+  prometheus:
+    image: prom/prometheus:v2.48.0
+    container_name: buurtinzicht-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infrastructure/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - buurtinzicht-network
+
+  # Grafana for monitoring dashboards
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: buurtinzicht-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - buurtinzicht-network
+
+  # Adminer for database management
+  adminer:
+    image: adminer:4.8.1
+    container_name: buurtinzicht-adminer
+    ports:
+      - "8081:8080"
+    networks:
+      - buurtinzicht-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  elasticsearch_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  buurtinzicht-network:
+    driver: bridge
