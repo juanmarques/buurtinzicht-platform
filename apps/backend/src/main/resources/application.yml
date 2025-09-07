@@ -198,6 +198,21 @@ app:
       base-url: https://data.iris.brussels/api
       timeout: 10000
       retry-attempts: 3
+
+# Belgian Government API Integration Configuration
+belgian-api:
+  statbel:
+    base-url: ${STATBEL_BASE_URL:https://api.statbel.fgov.be/v1}
+    api-key: ${STATBEL_API_KEY:}
+  geo6:
+    base-url: ${GEO6_BASE_URL:https://api-v2.geo6.be}
+    jwt-token: ${GEO6_JWT_TOKEN:}
+  bpost:
+    base-url: ${BPOST_BASE_URL:https://api.bpost.be/services/shm}
+    api-key: ${BPOST_API_KEY:}
+  timeout:
+    connect: ${BELGIAN_API_CONNECT_TIMEOUT:10000}
+    read: ${BELGIAN_API_READ_TIMEOUT:30000}
   
   # ML Service Configuration
   ml-service:
