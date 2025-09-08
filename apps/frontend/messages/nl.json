@@ -1,0 +1,639 @@
+{
+  "navigation": {
+    "search": "Buurt Zoeken",
+    "favorites": "Mijn Favorieten",
+    "docs": "API Docs",
+    "pricing": "Prijzen",
+    "dashboard": "Dashboard",
+    "about": "OverOns",
+    "contact": "Contact",
+    "privacy": "Privacy"
+  },
+  "homepage": {
+    "title": "Ontdek je ideale <span>buurt</span> in België",
+    "subtitle": "Maak slimme woonkeuzes met gedetailleerde buurtanalyses. Van veiligheid tot voorzieningen - alle informatie die je nodig hebt op één plek.",
+    "searchPlaceholder": "Voer een adres, postcode of plaatsnaam in...",
+    "searchButton": "Zoeken",
+    "searchExample": "Probeer bijvoorbeeld: <span>\"Gent\"</span>, <span>\"1000 Brussel\"</span>, of <span>\"Mechelsestraat 10\"</span>",
+    "forFamily": "Voor Mijn Gezin",
+    "familyDescription": "Vind de perfecte buurt voor uw familie met scholen, speeltuinen en veiligheid.",
+    "forBusiness": "Voor Mijn Bedrijf",
+    "businessDescription": "Ontdek zakelijke kansen met demografische data en marktanalyses.",
+    "whyChoose": "Waarom kiezen voor Buurtinzicht?",
+    "whyDescription": "Onze platform combineert officiële data met slimme analyses om je de meest accurate en actuele buurtinformatie te geven.",
+    "features": {
+      "search": {
+        "title": "Buurt Zoeken",
+        "description": "Vind je ideale buurt met geavanceerde zoekfilters en gedetailleerde informatie over voorzieningen."
+      },
+      "scorecards": {
+        "title": "Gedetailleerde Scorecards",
+        "description": "Krijg uitgebreide analyses van buurten met scores voor veiligheid, transport, voorzieningen en meer."
+      },
+      "safety": {
+        "title": "Veiligheidsgegevens",
+        "description": "Actuele criminaliteitsstatistieken en veiligheidsindicatoren voor elke buurt in België."
+      },
+      "realtime": {
+        "title": "Real-time Gegevens",
+        "description": "Altijd actuele informatie dankzij integratie met overheidsdata en openbare bronnen."
+      },
+      "compare": {
+        "title": "Vergelijken",
+        "description": "Vergelijk meerdere buurten naast elkaar om de beste keuze te maken."
+      }
+    },
+    "cta": {
+      "title": "Klaar om je ideale buurt te vinden?",
+      "subtitle": "Begin vandaag nog met het ontdekken van buurten in België. Gratis scorecards beschikbaar voor nieuwe gebruikers."
+    }
+  },
+  "common": {
+    "startSearch": "Start zoeken",
+    "viewOpportunities": "Bekijk mogelijkheden",
+    "startFreeSearch": "Start gratis zoeken",
+    "viewPricing": "Bekijk prijzen"
+  },
+  "about": {
+    "title": "Over Buurtinzicht",
+    "subtitle": "Wij helpen mensen hun ideale buurt te vinden door complexe data om te zetten naar begrijpelijke inzichten en gepersonaliseerde aanbevelingen.",
+    "founded": "Opgericht in 2020",
+    "location": "Brussel, België",
+    "mission": {
+      "title": "Onze Missie",
+      "paragraph1": "Het vinden van de perfecte buurt om te wonen is een van de belangrijkste beslissingen in iemands leven. Toch is het vaak moeilijk om objectieve informatie te vinden die aansluit bij jouw persoonlijke behoeften en voorkeuren.",
+      "paragraph2": "Daarom hebben we Buurtinzicht ontwikkeld: een platform dat uitgebreide data over Belgische buurten combineert met jouw persoonlijke voorkeuren om de beste match te vinden.",
+      "cta": "Ontdek je ideale buurt"
+    },
+    "unique": {
+      "title": "Wat maakt ons uniek?",
+      "item1": "Gepersonaliseerde scorecards gebaseerd op jouw voorkeuren",
+      "item2": "Realtime data van betrouwbare overheids- en commerciële bronnen",
+      "item3": "Interactieve kaarten met gedetailleerde buurtinformatie",
+      "item4": "AI-gedreven aanbevelingen voor vergelijkbare buurten"
+    },
+    "values": {
+      "title": "Onze Waarden",
+      "subtitle": "Deze kernwaarden sturen alles wat we doen, van productontwerp tot klantenservice.",
+      "precision": {
+        "title": "Precisie",
+        "description": "We leveren nauwkeurige en betrouwbare data om je te helpen weloverwogen beslissingen te nemen."
+      },
+      "userFocused": {
+        "title": "Gebruikersgericht",
+        "description": "Jouw behoeften staan centraal. We bouwen tools die echt helpen bij het vinden van je ideale thuis."
+      },
+      "innovation": {
+        "title": "Innovatie",
+        "description": "We gebruiken de nieuwste technologieën om complexe data om te zetten naar begrijpelijke inzichten."
+      },
+      "transparency": {
+        "title": "Transparantie",
+        "description": "Openheid over onze methodiek en databronnen, zodat je kunt vertrouwen op onze analyses."
+      }
+    },
+    "stats": {
+      "title": "Buurtinzicht in cijfers",
+      "subtitle": "Onze impact tot nu toe",
+      "users": "Tevreden gebruikers",
+      "neighborhoods": "Belgische buurten",
+      "searches": "Zoekopdrachten verwerkt",
+      "availability": "Beschikbaarheid"
+    },
+    "team": {
+      "title": "Ons Team",
+      "subtitle": "Ontmoet de experts die Buurtinzicht mogelijk maken",
+      "sarah": {
+        "name": "Sarah De Vries",
+        "role": "CEO & Oprichter",
+        "bio": "Expert in ruimtelijke data-analyse met 10+ jaar ervaring in de vastgoedsector."
+      },
+      "tom": {
+        "name": "Tom Janssens",
+        "role": "CTO",
+        "bio": "Technologie-expert gespecialiseerd in GIS-systemen en machine learning."
+      },
+      "lisa": {
+        "name": "Lisa Chen",
+        "role": "Lead Data Scientist",
+        "bio": "PhD in Stedelijke Planning met focus op demografische trends en leefbaarheid."
+      },
+      "marc": {
+        "name": "Marc Dubois",
+        "role": "Product Manager",
+        "bio": "15 jaar ervaring in het ontwikkelen van gebruiksvriendelijke data-platforms."
+      }
+    },
+    "cta": {
+      "title": "Klaar om je ideale buurt te vinden?",
+      "subtitle": "Sluit je aan bij duizenden tevreden gebruikers die al hun perfecte thuis hebben gevonden.",
+      "start": "Begin je zoektocht",
+      "contact": "Neem contact op"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Heb je vragen, feedback of wil je samenwerken? We horen graag van je!",
+    "info": {
+      "title": "Neem contact op",
+      "office": {
+        "title": "Hoofdkantoor",
+        "line1": "Buurtinzicht BV",
+        "line2": "Wetstraat 200",
+        "line3": "1000 Brussel, België"
+      },
+      "email": {
+        "title": "E-mail",
+        "description": "Voor algemene vragen en ondersteuning"
+      },
+      "phone": {
+        "title": "Telefoon",
+        "description": "Ma-Vr: 9:00 - 17:00 CET"
+      },
+      "hours": {
+        "title": "Openingstijden",
+        "weekdays": "Maandag - Vrijdag: 9:00 - 17:00",
+        "weekend": "Weekend: Gesloten",
+        "support": "Voor spoedeisende technische problemen zijn we 24/7 bereikbaar"
+      }
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Hoe nauwkeurig is jullie buurtdata?",
+      "q2": "Kan ik mijn eigen voorkeuren aanpassen?",
+      "q3": "Welke betalingsmethoden accepteren jullie?",
+      "link": "Bekijk onze <a>FAQ pagina</a> voor meer antwoorden."
+    },
+    "form": {
+      "title": "Stuur ons een bericht",
+      "reasonLabel": "Waarover wil je contact opnemen?",
+      "reasons": {
+        "general": "Algemene vraag",
+        "support": "Technische ondersteuning",
+        "business": "Zakelijke samenwerking",
+        "data": "Data of API vragen",
+        "feedback": "Feedback of suggesties"
+      },
+      "nameLabel": "Naam *",
+      "emailLabel": "E-mailadres *",
+      "companyLabel": "Bedrijf",
+      "optional": "Optioneel",
+      "subjectLabel": "Onderwerp *",
+      "messageLabel": "Bericht *",
+      "messagePlaceholder": "Vertel ons over je vraag, probleem of idee...",
+      "messageHelper": "Hoe meer details je geeft, hoe beter we je kunnen helpen",
+      "privacy": "Door dit formulier in te vullen, ga je akkoord met ons <a>privacybeleid</a>. We gebruiken je gegevens alleen om je vraag te beantwoorden.",
+      "submit": "Bericht versturen",
+      "submitting": "Versturen..."
+    },
+    "submitted": {
+      "title": "Bericht verzonden!",
+      "subtitle": "Bedankt voor je bericht. We nemen binnen 24 uur contact met je op.",
+      "new": "Nieuw bericht versturen"
+    }
+  },
+  "compare": {
+    "title": "Vergelijk Buurten",
+    "subtitle": "Vergelijk tot 4 buurten naast elkaar om de beste keuze voor jouw levensstijl te maken",
+    "searchPlaceholder": "Zoek buurten om te vergelijken...",
+    "maxNeighborhoods": "Je kunt maximaal 4 buurten vergelijken",
+    "empty": {
+      "title": "Begin met vergelijken",
+      "subtitle": "Zoek naar buurten en voeg ze toe om een gedetailleerde vergelijking te zien",
+      "cta": "Ontdek buurten"
+    },
+    "overview": {
+      "population": "Inwoners",
+      "type": "Type"
+    },
+    "addMore": "Voeg nog een buurt toe",
+    "table": {
+      "title": "Gedetailleerde Vergelijking",
+      "subtitle": "Scores op een schaal van 1 tot 10",
+      "category": "Categorie"
+    },
+    "actions": {
+      "title": "Volgende stappen",
+      "viewOnMap": "Bekijk op kaart",
+      "export": "Exporteer vergelijking",
+      "searchMore": "Zoek meer buurten"
+    },
+    "urbanization": {
+      "rural": "Landelijk",
+      "suburban": "Voorstedelijk",
+      "urban": "Stedelijk",
+      "metropolitan": "Grootstedelijk"
+    },
+    "metrics": {
+      "safety": "Veiligheid",
+      "transport": "OV",
+      "amenities": "Voorzieningen",
+      "culture": "Cultuur",
+      "nightlife": "Nachtleven",
+      "greenSpace": "Groen",
+      "costOfLiving": "Kosten"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom terug, {name}",
+    "settings": "Instellingen",
+    "newSearch": "Nieuwe zoekopdracht",
+    "stats": {
+      "searches": "Zoekopdrachten",
+      "favorites": "Favorieten",
+      "scorecards": "Scorecards",
+      "thisYear": "Dit jaar"
+    },
+    "recentSearches": {
+      "title": "Recente zoekopdrachten",
+      "viewAll": "Alle bekijken",
+      "empty": "Nog geen zoekopdrachten uitgevoerd",
+      "cta": "Start je eerste zoekopdracht",
+      "results": "{count, plural, one {# resultaat} other {# resultaten}}",
+      "repeat": "Herhaal zoekopdracht"
+    },
+    "favorites": {
+      "title": "Favoriete buurten",
+      "viewAll": "Alle bekijken",
+      "empty": "Nog geen favoriete buurten opgeslagen",
+      "cta": "Ontdek buurten",
+      "saved": "Opgeslagen op {date}",
+      "view": "Bekijk"
+    },
+    "profile": {
+      "membership": "{plan} lidmaatschap",
+      "memberSince": "Lid sinds",
+      "lastActive": "Laatste activiteit",
+      "edit": "Profiel bewerken"
+    },
+    "quickActions": {
+      "title": "Snelle acties",
+      "search": "Zoek buurten",
+      "favorites": "Mijn favorieten",
+      "scorecards": "Bekijk scorecards",
+      "settings": "Instellingen"
+    },
+    "tip": {
+      "title": "Tip van de dag",
+      "content": "Gebruik geavanceerde filters in je zoekopdracht om buurten te vinden die perfect bij je levensstijl passen!"
+    }
+  },
+  "docs": {
+    "title": "API Documentatie",
+    "subtitle": "Ontdek hoe je de Buurtinzicht API kunt gebruiken om spatiale data en buurtinformatie op te halen",
+    "quickStats": {
+      "apiType": {
+        "label": "REST API",
+        "value": "JSON responses"
+      },
+      "authentication": {
+        "label": "Authenticatie",
+        "value": "API key vereist"
+      },
+      "rateLimit": {
+        "label": "Rate Limit",
+        "value": "1000/uur"
+      },
+      "sdks": {
+        "label": "SDKs",
+        "value": "JavaScript, Python"
+      }
+    },
+    "sidebar": {
+      "endpoints": "Endpoints",
+      "quickLinks": "Snelle links",
+      "authentication": "Authenticatie",
+      "rateLimiting": "Rate Limiting",
+      "errorHandling": "Foutafhandeling",
+      "sdks": "SDKs & Bibliotheken"
+    },
+    "copy": {
+      "copy": "Kopieer",
+      "copied": "Gekopieerd!"
+    },
+    "requestBody": "Request Body",
+    "responseExample": "Response Voorbeeld",
+    "testApi": "Test API",
+    "authentication": {
+      "title": "Authenticatie",
+      "description": "Alle API verzoeken vereisen een geldige API key in de request header."
+    },
+    "rateLimiting": {
+      "title": "Rate Limiting",
+      "description": "De API heeft een rate limit van 1000 verzoeken per uur per API key.",
+      "note": {
+        "title": "Let op",
+        "content": "Wanneer je de rate limit bereikt, krijg je een 429 status code. De headers bevatten informatie over wanneer je weer verzoeken kunt doen."
+      }
+    },
+    "errorHandling": {
+      "title": "Foutafhandeling",
+      "description": "De API gebruikt standaard HTTP status codes en retourneert gestructureerde error responses."
+    },
+    "endpoints": {
+      "search": {
+        "title": "Ruimtelijke Zoekopdracht",
+        "description": "Zoek naar buurten binnen een bepaalde radius van een locatie"
+      },
+      "neighborhoods": {
+        "title": "Buurt Details",
+        "description": "Haal gedetailleerde informatie op van een specifieke buurt"
+      },
+      "scorecard": {
+        "title": "Genereer Scorecard",
+        "description": "Genereer een gedetailleerde scorecard voor een buurt"
+      }
+    }
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Vind snel antwoorden op de meest gestelde vragen over Buurtinzicht",
+    "searchPlaceholder": "Zoek in de FAQ...",
+    "categories": {
+      "all": "Alle categorieën",
+      "general": "Algemeen",
+      "data": "Data & Nauwkeurigheid",
+      "features": "Features & Gebruik",
+      "pricing": "Prijzen & Abonnementen",
+      "technical": "Technisch"
+    },
+    "noResults": {
+      "title": "Geen resultaten gevonden",
+      "subtitle": "Probeer een andere zoekterm of wijzig je categorie",
+      "clearSearch": "Wis zoekterm",
+      "allCategories": "Alle categorieën"
+    },
+    "stats": {
+      "articles": "FAQ artikelen",
+      "categories": "Categorieën",
+      "responseTime": "Reactietijd"
+    },
+    "cta": {
+      "title": "Vraag niet beantwoord?",
+      "subtitle": "Ons support team helpt je graag verder met je specifieke vraag",
+      "contact": "Neem contact op",
+      "chat": "Live chat starten"
+    },
+    "items": {
+      "whatIs": {
+        "question": "Wat is Buurtinzicht?",
+        "answer": "Buurtinzicht is een platform dat je helpt bij het vinden van de ideale buurt om te wonen in België. We combineren officiële data met je persoonlijke voorkeuren om gepersonaliseerde aanbevelingen te geven."
+      },
+      "howItWorks": {
+        "question": "Hoe werkt de buurt-matching?",
+        "answer": "Je geeft aan wat belangrijk is voor jou (veiligheid, transport, cultuur, etc.) en wij berekenen scores voor alle buurten op basis van jouw voorkeuren. Zo vind je buurten die het beste bij je levensstijl passen."
+      },
+      "coverage": {
+        "question": "Welke gebieden dekken jullie?",
+        "answer": "We dekken heel België met gedetailleerde data voor meer dan 11.000 buurten en wijken. Van grote steden tot kleine dorpen - alle gemeenten zijn opgenomen in onze database."
+      },
+      "accuracy": {
+        "question": "Hoe nauwkeurig is jullie data?",
+        "answer": "Onze data komt van betrouwbare bronnen zoals Statbel, FOD Binnenlandse Zaken, MIVB/De Lijn/TEC en andere officiële instanties. We updaten de informatie regelmatig om de nauwkeurigheid te garanderen."
+      },
+      "updates": {
+        "question": "Hoe vaak wordt de data bijgewerkt?",
+        "answer": "Basis demografische data wordt jaarlijks bijgewerkt. Informatie over transport, criminaliteit en voorzieningen wordt maandelijks geüpdatet. Prijsgegevens worden wekelijks bijgewerkt."
+      },
+      "contribute": {
+        "question": "Kan ik zelf data toevoegen of corrigeren?",
+        "answer": "Momenteel kunnen gebruikers geen data direct wijzigen. Wel kun je via ons contactformulier fouten melden of suggesties doen. We controleren alle meldingen en passen indien nodig de data aan."
+      },
+      "preferences": {
+        "question": "Kan ik mijn voorkeuren aanpassen?",
+        "answer": "Ja, je kunt altijd je voorkeuren wijzigen in je account instellingen. Je scorecards worden automatisch herberekend op basis van je nieuwe voorkeuren."
+      },
+      "scorecard": {
+        "question": "Wat is een scorecard?",
+        "answer": "Een scorecard is een gepersonaliseerd rapport dat laat zien hoe goed een buurt bij jou past. Het bevat scores voor verschillende categorieën en vergelijkt de buurt met je ideale profiel."
+      },
+      "compare": {
+        "question": "Kan ik buurten vergelijken?",
+        "answer": "Ja, je kunt tot 4 buurten tegelijk vergelijken. Dit helpt je bij het maken van een weloverwogen keuze tussen verschillende opties."
+      },
+      "share": {
+        "question": "Kunnen meerdere personen een account delen?",
+        "answer": "Een account is bedoeld voor individueel gebruik. Voor families raden we aan om samen de voorkeuren in te stellen of elk een eigen account aan te maken."
+      },
+      "cost": {
+        "question": "Wat kost Buurtinzicht?",
+        "answer": "We hebben een gratis plan met basisfeatures en betaalde plannen vanaf €19/maand. Bekijk onze prijzenpagina voor een volledig overzicht van features per plan."
+      },
+      "trial": {
+        "question": "Is er een gratis proefperiode?",
+        "answer": "Het gratis plan geeft je al toegang tot de kernfuncties. Voor betaalde plannen bieden we een 14-dagen geld-terug-garantie als je niet tevreden bent."
+      },
+      "cancel": {
+        "question": "Kan ik mijn abonnement opzeggen?",
+        "answer": "Ja, je kunt je abonnement op elk moment opzeggen. Er zijn geen langetermijncontracten. Je behoudt toegang tot betaalde features tot het einde van je factureringsperiode."
+      },
+      "payment": {
+        "question": "Welke betaalmethoden accepteren jullie?",
+        "answer": "We accepteren alle grote creditcards (Visa, Mastercard, American Express), SEPA overschrijvingen en PayPal. Alle betalingen worden veilig verwerkt."
+      },
+      "mobile": {
+        "question": "Is er een mobiele app?",
+        "answer": "Momenteel hebben we geen native app, maar onze website is volledig geoptimaliseerd voor mobiel gebruik en werkt uitstekend op smartphones en tablets."
+      },
+      "browsers": {
+        "question": "Werkt Buurtinzicht op alle browsers?",
+        "answer": "Ja, we ondersteunen alle moderne browsers: Chrome, Firefox, Safari, Edge. Voor de beste ervaring raden we aan om je browser up-to-date te houden."
+      },
+      "api": {
+        "question": "Is er een API beschikbaar?",
+        "answer": "Ja, we bieden een REST API voor zakelijke gebruikers. Contact ons voor meer informatie over API toegang en pricing."
+      }
+    }
+  },
+  "favorites": {
+    "title": "Favoriete buurten",
+    "subtitle": "Je hebt {count, plural, one {# buurt} other {# buurten}} opgeslagen om later te bekijken",
+    "searchPlaceholder": "Zoek in je favorieten...",
+    "sort": {
+      "newest": "Nieuwste eerst",
+      "rating": "Hoogste beoordeling",
+      "name": "Alfabetisch"
+    },
+    "filter": {
+      "all": "Alle types",
+      "metropolitan": "Grootstedelijk",
+      "urban": "Stedelijk",
+      "suburban": "Voorstedelijk",
+      "rural": "Landelijk"
+    },
+    "noResults": {
+      "title": "Geen resultaten gevonden",
+      "subtitle": "Probeer je zoekterm aan te passen of wijzig je filters",
+      "clearSearch": "Wis zoekterm",
+      "clearFilters": "Wis filters"
+    },
+    "empty": {
+      "title": "Nog geen favorieten",
+      "subtitle": "Zoek naar buurten en voeg ze toe aan je favorieten om ze hier te zien",
+      "cta": "Ontdek buurten"
+    },
+    "remove": "Verwijder uit favorieten",
+    "stats": {
+      "population": "Inwoners",
+      "area": "Oppervlakte"
+    },
+    "notes": "Jouw notitie",
+    "addedOn": "Toegevoegd op {date}",
+    "actions": {
+      "share": "Delen",
+      "scorecard": "Scorecard",
+      "view": "Bekijk"
+    },
+    "share": {
+      "text": "Ontdek deze buurt: {name} in {municipality}"
+    },
+    "urbanization": {
+      "rural": "Landelijk",
+      "suburban": "Voorstedelijk",
+      "urban": "Stedelijk",
+      "metropolitan": "Grootstedelijk"
+    }
+  },
+  "pricing": {
+    "title": "Kies het juiste plan voor jou",
+    "subtitle": "Begin gratis of upgrade naar een betaald plan voor toegang tot premium functies en onbeperkte mogelijkheden",
+    "billing": {
+      "monthly": "Maandelijks",
+      "yearly": "Jaarlijks",
+      "save": "Bespaar tot {percentage}%"
+    },
+    "mostPopular": "Meest populair",
+    "perMonth": "/maand",
+    "perYear": "per jaar",
+    "save": "Bespaar",
+    "cta": {
+      "startFree": "Begin gratis",
+      "startToday": "Start vandaag",
+      "viewDemo": "Bekijk demo"
+    },
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Perfect om te beginnen met het ontdekken van buurten",
+        "features": {
+          "searches": "5 zoekopdrachten per maand",
+          "comparisons": "2 buurt vergelijkingen per maand",
+          "basicInfo": "Basis buurtinformatie",
+          "publicMaps": "Openbare kaarten",
+          "favorites": "Tot 3 favoriete buurten",
+          "scorecards": "Gedetailleerde scorecards",
+          "unlimitedSearches": "Onbeperkte zoekopdrachten",
+          "premiumData": "Premium data en insights",
+          "apiAccess": "API toegang",
+          "prioritySupport": "Prioriteit ondersteuning"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Ideaal voor huiskopers en makelaars die serieus zoeken",
+        "features": {
+          "unlimitedSearches": "Onbeperkte zoekopdrachten",
+          "unlimitedComparisons": "Onbeperkte vergelijkingen",
+          "detailedScorecards": "Gedetailleerde scorecards",
+          "premiumMaps": "Premium kaarten en visualisaties",
+          "favorites": "Tot 50 favoriete buurten",
+          "historicalData": "Historische data en trends",
+          "personalizedRecommendations": "Gepersonaliseerde aanbevelingen",
+          "export": "Export functionaliteit",
+          "apiAccess": "API toegang (beperkt)",
+          "prioritySupport": "Prioriteit ondersteuning"
+        }
+      },
+      "business": {
+        "name": "Business",
+        "description": "Voor vastgoedprofessionals en bedrijven met hoogwaardige behoeften",
+        "features": {
+          "allPro": "Alles uit Pro plan",
+          "fullApi": "Volledige API toegang",
+          "bulkExport": "Bulk data export",
+          "customReports": "Aangepaste rapporten",
+          "teamCollaboration": "Team collaboration tools",
+          "whiteLabel": "White-label opties",
+          "prioritySupport": "Prioriteit ondersteuning",
+          "training": "Training en onboarding",
+          "customIntegrations": "Custom integraties",
+          "sla": "SLA garanties"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Gedetailleerde vergelijking",
+      "subtitle": "Vergelijk alle functies naast elkaar om de juiste keuze te maken",
+      "features": "Functies",
+      "unlimited": "Onbeperkt",
+      "basic": "Basis",
+      "full": "Volledig",
+      "fullCustom": "Volledig + Custom",
+      "perMonth": "{count}/maand",
+      "allFormats": "Alle formaten",
+      "search": {
+        "category": "Zoeken & Ontdekken",
+        "features": {
+          "monthlySearches": "Zoekopdrachten per maand",
+          "advancedFilters": "Geavanceerde filters",
+          "radiusSearch": "Radius zoeken",
+          "locationSearch": "Locatie gebaseerd zoeken"
+        }
+      },
+      "data": {
+        "category": "Data & Insights",
+        "features": {
+          "basicInfo": "Basis buurtinformatie",
+          "detailedScorecards": "Gedetailleerde scorecards",
+          "historicalTrends": "Historische trends",
+          "predictiveAnalytics": "Voorspellende analytics"
+        }
+      },
+      "tools": {
+        "category": "Tools & Features",
+        "features": {
+          "comparisons": "Buurt vergelijkingen",
+          "favorites": "Favorieten opslaan",
+          "export": "Export functionaliteit",
+          "teamCollaboration": "Team samenwerking"
+        }
+      }
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": {
+        "question": "Kan ik mijn plan op elk moment wijzigen?",
+        "answer": "Ja, je kunt je plan op elk moment upgraden of downgraden. Wijzigingen gaan meteen in en je wordt pro-rata gefactureerd."
+      },
+      "q2": {
+        "question": "Is er een gratis proefperiode?",
+        "answer": "Het gratis plan geeft je al toegang tot de kernfuncties. Voor betaalde plannen bieden we een 14-dagen geld-terug-garantie."
+      },
+      "q3": {
+        "question": "Welke betaalmethoden accepteren jullie?",
+        "answer": "We accepteren alle grote creditcards, SEPA overschrijving en PayPal voor een veilige en gemakkelijke betaalervaring."
+      },
+      "q4": {
+        "question": "Is mijn data veilig?",
+        "answer": "Absoluut. We gebruiken enterprise-grade beveiliging en voldoen aan alle GDPR-richtlijnen om je data te beschermen."
+      }
+    }
+  },
+  "footer": {
+    "description": "Ontdek en vergelijk Belgische buurten met gedetailleerde analyses en inzichten voor slimmere woonkeuzes.",
+    "product": {
+      "title": "Product",
+      "search": "Buurt Zoeken",
+      "compare": "Vergelijken",
+      "pricing": "Prijzen"
+    },
+    "company": {
+      "title": "Bedrijf",
+      "about": "Over Ons",
+      "contact": "Contact",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2024 Buurtinzicht. Alle rechten voorbehouden."
+  }
+}
