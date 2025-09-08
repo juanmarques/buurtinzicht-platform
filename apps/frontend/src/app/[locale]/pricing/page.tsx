@@ -16,6 +16,8 @@ import {
   Sparkles
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
+import { useTranslations } from 'next-intl';
+import { useFormatters } from '../../lib/formatters';
 
 interface PricingPlan {
   id: string;
@@ -36,28 +38,30 @@ interface PricingPlan {
 }
 
 export default function PricingPage() {
+  const t = useTranslations('pricing');
+  const { formatCurrency, formatPercent } = useFormatters();
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const plans: PricingPlan[] = [
     {
       id: 'free',
-      name: 'Gratis',
-      description: 'Perfect om te beginnen met het ontdekken van buurten',
+      name: t('plans.free.name'),
+      description: t('plans.free.description'),
       price: {
         monthly: 0,
         yearly: 0
       },
       features: [
-        { name: '5 zoekopdrachten per maand', included: true },
-        { name: '2 buurt vergelijkingen per maand', included: true },
-        { name: 'Basis buurtinformatie', included: true },
-        { name: 'Openbare kaarten', included: true },
-        { name: 'Tot 3 favoriete buurten', included: true },
-        { name: 'Gedetailleerde scorecards', included: false },
-        { name: 'Onbeperkte zoekopdrachten', included: false },
-        { name: 'Premium data en insights', included: false },
-        { name: 'API toegang', included: false },
-        { name: 'Prioriteit ondersteuning', included: false }
+        { name: t('plans.free.features.searches'), included: true },
+        { name: t('plans.free.features.comparisons'), included: true },
+        { name: t('plans.free.features.basicInfo'), included: true },
+        { name: t('plans.free.features.publicMaps'), included: true },
+        { name: t('plans.free.features.favorites'), included: true },
+        { name: t('plans.free.features.scorecards'), included: false },
+        { name: t('plans.free.features.unlimitedSearches'), included: false },
+        { name: t('plans.free.features.premiumData'), included: false },
+        { name: t('plans.free.features.apiAccess'), included: false },
+        { name: t('plans.free.features.prioritySupport'), included: false }
       ],
       highlighted: false,
       icon: Heart,
@@ -65,23 +69,23 @@ export default function PricingPage() {
     },
     {
       id: 'pro',
-      name: 'Pro',
-      description: 'Ideaal voor huiskopers en makelaars die serieus zoeken',
+      name: t('plans.pro.name'),
+      description: t('plans.pro.description'),
       price: {
         monthly: 19,
         yearly: 190
       },
       features: [
-        { name: 'Onbeperkte zoekopdrachten', included: true },
-        { name: 'Onbeperkte vergelijkingen', included: true },
-        { name: 'Gedetailleerde scorecards', included: true },
-        { name: 'Premium kaarten en visualisaties', included: true },
-        { name: 'Tot 50 favoriete buurten', included: true },
-        { name: 'Historische data en trends', included: true },
-        { name: 'Gepersonaliseerde aanbevelingen', included: true },
-        { name: 'Export functionaliteit', included: true },
-        { name: 'API toegang (beperkt)', included: false },
-        { name: 'Prioriteit ondersteuning', included: false }
+        { name: t('plans.pro.features.unlimitedSearches'), included: true },
+        { name: t('plans.pro.features.unlimitedComparisons'), included: true },
+        { name: t('plans.pro.features.detailedScorecards'), included: true },
+        { name: t('plans.pro.features.premiumMaps'), included: true },
+        { name: t('plans.pro.features.favorites'), included: true },
+        { name: t('plans.pro.features.historicalData'), included: true },
+        { name: t('plans.pro.features.personalizedRecommendations'), included: true },
+        { name: t('plans.pro.features.export'), included: true },
+        { name: t('plans.pro.features.apiAccess'), included: false },
+        { name: t('plans.pro.features.prioritySupport'), included: false }
       ],
       highlighted: true,
       icon: Star,
@@ -89,23 +93,23 @@ export default function PricingPage() {
     },
     {
       id: 'business',
-      name: 'Business',
-      description: 'Voor vastgoedprofessionals en bedrijven met hoogwaardige behoeften',
+      name: t('plans.business.name'),
+      description: t('plans.business.description'),
       price: {
         monthly: 49,
         yearly: 490
       },
       features: [
-        { name: 'Alles uit Pro plan', included: true },
-        { name: 'Volledige API toegang', included: true },
-        { name: 'Bulk data export', included: true },
-        { name: 'Aangepaste rapporten', included: true },
-        { name: 'Team collaboration tools', included: true },
-        { name: 'White-label opties', included: true },
-        { name: 'Prioriteit ondersteuning', included: true },
-        { name: 'Training en onboarding', included: true },
-        { name: 'Custom integraties', included: true },
-        { name: 'SLA garanties', included: true }
+        { name: t('plans.business.features.allPro'), included: true },
+        { name: t('plans.business.features.fullApi'), included: true },
+        { name: t('plans.business.features.bulkExport'), included: true },
+        { name: t('plans.business.features.customReports'), included: true },
+        { name: t('plans.business.features.teamCollaboration'), included: true },
+        { name: t('plans.business.features.whiteLabel'), included: true },
+        { name: t('plans.business.features.prioritySupport'), included: true },
+        { name: t('plans.business.features.training'), included: true },
+        { name: t('plans.business.features.customIntegrations'), included: true },
+        { name: t('plans.business.features.sla'), included: true }
       ],
       highlighted: false,
       icon: Crown,
@@ -115,30 +119,30 @@ export default function PricingPage() {
 
   const featuresComparison = [
     {
-      category: 'Zoeken & Ontdekken',
+      category: t('comparison.search.category'),
       features: [
-        { name: 'Zoekopdrachten per maand', free: '5', pro: 'Onbeperkt', business: 'Onbeperkt' },
-        { name: 'Geavanceerde filters', free: 'Basis', pro: 'Volledig', business: 'Volledig + Custom' },
-        { name: 'Radius zoeken', free: '✓', pro: '✓', business: '✓' },
-        { name: 'Locatie gebaseerd zoeken', free: '✓', pro: '✓', business: '✓' }
+        { name: t('comparison.search.features.monthlySearches'), free: '5', pro: t('comparison.unlimited'), business: t('comparison.unlimited') },
+        { name: t('comparison.search.features.advancedFilters'), free: t('comparison.basic'), pro: t('comparison.full'), business: t('comparison.fullCustom') },
+        { name: t('comparison.search.features.radiusSearch'), free: '✓', pro: '✓', business: '✓' },
+        { name: t('comparison.search.features.locationSearch'), free: '✓', pro: '✓', business: '✓' }
       ]
     },
     {
-      category: 'Data & Insights',
+      category: t('comparison.data.category'),
       features: [
-        { name: 'Basis buurtinformatie', free: '✓', pro: '✓', business: '✓' },
-        { name: 'Gedetailleerde scorecards', free: '✗', pro: '✓', business: '✓' },
-        { name: 'Historische trends', free: '✗', pro: '✓', business: '✓' },
-        { name: 'Voorspellende analytics', free: '✗', pro: '✗', business: '✓' }
+        { name: t('comparison.data.features.basicInfo'), free: '✓', pro: '✓', business: '✓' },
+        { name: t('comparison.data.features.detailedScorecards'), free: '✗', pro: '✓', business: '✓' },
+        { name: t('comparison.data.features.historicalTrends'), free: '✗', pro: '✓', business: '✓' },
+        { name: t('comparison.data.features.predictiveAnalytics'), free: '✗', pro: '✗', business: '✓' }
       ]
     },
     {
-      category: 'Tools & Features',
+      category: t('comparison.tools.category'),
       features: [
-        { name: 'Buurt vergelijkingen', free: '2/maand', pro: 'Onbeperkt', business: 'Onbeperkt' },
-        { name: 'Favorieten opslaan', free: '3', pro: '50', business: 'Onbeperkt' },
-        { name: 'Export functionaliteit', free: '✗', pro: 'PDF/CSV', business: 'Alle formaten' },
-        { name: 'Team samenwerking', free: '✗', pro: '✗', business: '✓' }
+        { name: t('comparison.tools.features.comparisons'), free: t('comparison.perMonth', { count: 2 }), pro: t('comparison.unlimited'), business: t('comparison.unlimited') },
+        { name: t('comparison.tools.features.favorites'), free: '3', pro: '50', business: t('comparison.unlimited') },
+        { name: t('comparison.tools.features.export'), free: '✗', pro: 'PDF/CSV', business: t('comparison.allFormats') },
+        { name: t('comparison.tools.features.teamCollaboration'), free: '✗', pro: '✗', business: '✓' }
       ]
     }
   ];
@@ -167,16 +171,16 @@ export default function PricingPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">
-              Kies het juiste plan voor jou
+              {t('title')}
             </h1>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
-              Begin gratis of upgrade naar een betaald plan voor toegang tot premium functies en onbeperkte mogelijkheden
+              {t('subtitle')}
             </p>
             
             {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-8">
               <span className={`mr-3 ${billingCycle === 'monthly' ? 'text-neutral-900 font-medium' : 'text-neutral-600'}`}>
-                Maandelijks
+                {t('billing.monthly')}
               </span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
@@ -191,11 +195,11 @@ export default function PricingPage() {
                 />
               </button>
               <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-neutral-900 font-medium' : 'text-neutral-600'}`}>
-                Jaarlijks
+                {t('billing.yearly')}
               </span>
               {billingCycle === 'yearly' && (
                 <span className="ml-2 bg-green-100 text-green-800 text-sm px-2 py-1 rounded-full">
-                  Bespaar tot 17%
+                  {t('billing.save', { percentage: 17 })}
                 </span>
               )}
             </div>
@@ -221,7 +225,7 @@ export default function PricingPage() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
                       <Sparkles className="h-4 w-4 mr-1" />
-                      Meest populair
+                      {t('mostPopular')}
                     </div>
                   </div>
                 )}
@@ -235,12 +239,15 @@ export default function PricingPage() {
                     
                     <div className="mb-4">
                       <div className="text-4xl font-bold text-neutral-900">
-                        €{getMonthlyPrice(plan).toFixed(0)}
-                        {plan.price.monthly > 0 && <span className="text-lg text-neutral-600">/maand</span>}
+                        {plan.price.monthly === 0 
+                          ? t('plans.free.name')
+                          : formatCurrency(getMonthlyPrice(plan))
+                        }
+                        {plan.price.monthly > 0 && <span className="text-lg text-neutral-600">/{t('perMonth')}</span>}
                       </div>
                       {billingCycle === 'yearly' && plan.price.monthly > 0 && (
                         <div className="text-sm text-neutral-600">
-                          €{getPrice(plan)} per jaar • Bespaar {getSavings(plan)}%
+                          {formatCurrency(getPrice(plan))} {t('perYear')} • {t('save')} {formatPercent(getSavings(plan))}
                         </div>
                       )}
                     </div>
@@ -250,7 +257,7 @@ export default function PricingPage() {
                       className="w-full"
                       size="lg"
                     >
-                      {plan.id === 'free' ? 'Begin gratis' : 'Start vandaag'}
+                      {plan.id === 'free' ? t('cta.startFree') : t('cta.startToday')}
                     </Button>
                   </div>
                   
@@ -278,18 +285,18 @@ export default function PricingPage() {
         {/* Feature Comparison Table */}
         <div className="bg-white rounded-2xl shadow-sm border border-neutral-200 overflow-hidden mb-16">
           <div className="p-8 border-b border-neutral-200">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-2">Gedetailleerde vergelijking</h2>
-            <p className="text-neutral-600">Vergelijk alle functies naast elkaar om de juiste keuze te maken</p>
+            <h2 className="text-2xl font-bold text-neutral-900 mb-2">{t('comparison.title')}</h2>
+            <p className="text-neutral-600">{t('comparison.subtitle')}</p>
           </div>
           
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-neutral-50">
                 <tr>
-                  <th className="px-8 py-4 text-left text-sm font-medium text-neutral-900">Functies</th>
-                  <th className="px-8 py-4 text-center text-sm font-medium text-neutral-900">Gratis</th>
-                  <th className="px-8 py-4 text-center text-sm font-medium text-neutral-900">Pro</th>
-                  <th className="px-8 py-4 text-center text-sm font-medium text-neutral-900">Business</th>
+                  <th className="px-8 py-4 text-left text-sm font-medium text-neutral-900">{t('comparison.features')}</th>
+                  <th className="px-8 py-4 text-center text-sm font-medium text-neutral-900">{t('plans.free.name')}</th>
+                  <th className="px-8 py-4 text-center text-sm font-medium text-neutral-900">{t('plans.pro.name')}</th>
+                  <th className="px-8 py-4 text-center text-sm font-medium text-neutral-900">{t('plans.business.name')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-200">
@@ -317,30 +324,30 @@ export default function PricingPage() {
 
         {/* FAQ */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-neutral-900 text-center mb-8">Veelgestelde vragen</h2>
+          <h2 className="text-2xl font-bold text-neutral-900 text-center mb-8">{t('faq.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Kan ik mijn plan op elk moment wijzigen?</h3>
+              <h3 className="font-semibold text-neutral-900 mb-2">{t('faq.q1.question')}</h3>
               <p className="text-neutral-600 text-sm">
-                Ja, je kunt je plan op elk moment upgraden of downgraden. Wijzigingen gaan meteen in en je wordt pro-rata gefactureerd.
+                {t('faq.q1.answer')}
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Is er een gratis proefperiode?</h3>
+              <h3 className="font-semibold text-neutral-900 mb-2">{t('faq.q2.question')}</h3>
               <p className="text-neutral-600 text-sm">
-                Het gratis plan geeft je al toegang tot de kernfuncties. Voor betaalde plannen bieden we een 14-dagen geld-terug-garantie.
+                {t('faq.q2.answer')}
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Welke betaalmethoden accepteren jullie?</h3>
+              <h3 className="font-semibold text-neutral-900 mb-2">{t('faq.q3.question')}</h3>
               <p className="text-neutral-600 text-sm">
-                We accepteren alle grote creditcards, SEPA overschrijving en PayPal voor een veilige en gemakkelijke betaalervaring.
+                {t('faq.q3.answer')}
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Is mijn data veilig?</h3>
+              <h3 className="font-semibold text-neutral-900 mb-2">{t('faq.q4.question')}</h3>
               <p className="text-neutral-600 text-sm">
-                Absoluut. We gebruiken enterprise-grade beveiliging en voldoen aan alle GDPR-richtlijnen om je data te beschermen.
+                {t('faq.q4.answer')}
               </p>
             </div>
           </div>
@@ -348,18 +355,18 @@ export default function PricingPage() {
 
         {/* CTA */}
         <div className="bg-primary-600 rounded-2xl p-8 text-center text-white mt-16">
-          <h2 className="text-2xl font-bold mb-4">Klaar om je ideale buurt te vinden?</h2>
+          <h2 className="text-2xl font-bold mb-4">{t('cta.title')}</h2>
           <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-            Sluit je aan bij duizenden mensen die al hun perfecte buurt hebben gevonden met Buurtinzicht
+            {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/search">
               <Button variant="secondary" size="lg">
-                Begin gratis
+                {t('cta.startFree')}
               </Button>
             </Link>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary-600">
-              Bekijk demo
+              {t('cta.viewDemo')}
             </Button>
           </div>
         </div>

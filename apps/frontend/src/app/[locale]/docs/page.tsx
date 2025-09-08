@@ -3,8 +3,10 @@
 import React, { useState } from 'react';
 import { Book, Play, Copy, Check, Code, FileText, Zap, Shield } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
+import { useTranslations } from 'next-intl';
 
 export default function DocsPage() {
+  const t = useTranslations('docs');
   const [copiedEndpoint, setCopiedEndpoint] = useState<string | null>(null);
   const [selectedEndpoint, setSelectedEndpoint] = useState('search');
 
@@ -16,10 +18,10 @@ export default function DocsPage() {
 
   const apiEndpoints = {
     search: {
-      title: 'Spatial Search',
+      title: t('endpoints.search.title'),
       method: 'POST',
       endpoint: '/api/spatial/search',
-      description: 'Zoek naar buurten binnen een bepaalde radius van een locatie',
+      description: t('endpoints.search.description'),
       requestBody: {
         latitude: 50.8503,
         longitude: 4.3517,
@@ -55,10 +57,10 @@ export default function DocsPage() {
       }
     },
     neighborhoods: {
-      title: 'Neighborhood Details',
+      title: t('endpoints.neighborhoods.title'),
       method: 'GET',
       endpoint: '/api/neighborhoods/{nisCode}',
-      description: 'Haal gedetailleerde informatie op van een specifieke buurt',
+      description: t('endpoints.neighborhoods.description'),
       requestBody: null,
       responseExample: {
         nisCode: '11001',
@@ -80,10 +82,10 @@ export default function DocsPage() {
       }
     },
     scorecard: {
-      title: 'Generate Scorecard',
+      title: t('endpoints.scorecard.title'),
       method: 'POST',
       endpoint: '/api/scorecard/generate',
-      description: 'Genereer een gedetailleerde scorecard voor een buurt',
+      description: t('endpoints.scorecard.description'),
       requestBody: {
         nisCode: '11001',
         preferences: {
@@ -120,10 +122,10 @@ export default function DocsPage() {
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 flex items-center justify-center">
               <Book className="h-8 w-8 mr-3 text-primary-600" />
-              API Documentatie
+              {t('title')}
             </h1>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Ontdek hoe je de Buurtinzicht API kunt gebruiken om spatiale data en buurtinformatie op te halen
+              {t('subtitle')}
             </p>
           </div>
 
@@ -131,23 +133,23 @@ export default function DocsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 text-center">
               <Zap className="h-6 w-6 text-primary-600 mx-auto mb-2" />
-              <div className="font-semibold text-primary-900">REST API</div>
-              <div className="text-sm text-primary-700">JSON responses</div>
+              <div className="font-semibold text-primary-900">{t('quickStats.apiType.label')}</div>
+              <div className="text-sm text-primary-700">{t('quickStats.apiType.value')}</div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
               <Shield className="h-6 w-6 text-green-600 mx-auto mb-2" />
-              <div className="font-semibold text-green-900">Authenticatie</div>
-              <div className="text-sm text-green-700">API key required</div>
+              <div className="font-semibold text-green-900">{t('quickStats.authentication.label')}</div>
+              <div className="text-sm text-green-700">{t('quickStats.authentication.value')}</div>
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
               <Code className="h-6 w-6 text-blue-600 mx-auto mb-2" />
-              <div className="font-semibold text-blue-900">Rate Limit</div>
-              <div className="text-sm text-blue-700">1000/hour</div>
+              <div className="font-semibold text-blue-900">{t('quickStats.rateLimit.label')}</div>
+              <div className="text-sm text-blue-700">{t('quickStats.rateLimit.value')}</div>
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
               <FileText className="h-6 w-6 text-purple-600 mx-auto mb-2" />
-              <div className="font-semibold text-purple-900">SDKs</div>
-              <div className="text-sm text-purple-700">JavaScript, Python</div>
+              <div className="font-semibold text-purple-900">{t('quickStats.sdks.label')}</div>
+              <div className="text-sm text-purple-700">{t('quickStats.sdks.value')}</div>
             </div>
           </div>
         </div>
@@ -158,7 +160,7 @@ export default function DocsPage() {
           {/* Sidebar Navigation */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-4 sticky top-8">
-              <h3 className="font-semibold text-neutral-900 mb-4">Endpoints</h3>
+              <h3 className="font-semibold text-neutral-900 mb-4">{t('sidebar.endpoints')}</h3>
               <nav className="space-y-2">
                 {Object.entries(apiEndpoints).map(([key, endpoint]) => (
                   <button
@@ -183,19 +185,19 @@ export default function DocsPage() {
               </nav>
 
               <div className="mt-6 pt-4 border-t border-neutral-200">
-                <h4 className="font-semibold text-neutral-900 mb-2">Quick Links</h4>
+                <h4 className="font-semibold text-neutral-900 mb-2">{t('sidebar.quickLinks')}</h4>
                 <div className="space-y-1 text-sm">
                   <a href="#authentication" className="block text-primary-600 hover:text-primary-700">
-                    Authentication
+                    {t('sidebar.authentication')}
                   </a>
                   <a href="#rate-limiting" className="block text-primary-600 hover:text-primary-700">
-                    Rate Limiting
+                    {t('sidebar.rateLimiting')}
                   </a>
                   <a href="#errors" className="block text-primary-600 hover:text-primary-700">
-                    Error Handling
+                    {t('sidebar.errorHandling')}
                   </a>
                   <a href="#sdks" className="block text-primary-600 hover:text-primary-700">
-                    SDKs & Libraries
+                    {t('sidebar.sdks')}
                   </a>
                 </div>
               </div>
@@ -229,7 +231,7 @@ export default function DocsPage() {
                     icon={copiedEndpoint === selectedEndpoint ? Check : Copy}
                     onClick={() => copyToClipboard(currentEndpoint.endpoint, selectedEndpoint)}
                   >
-                    {copiedEndpoint === selectedEndpoint ? 'Gekopieerd!' : 'Kopieer'}
+                    {copiedEndpoint === selectedEndpoint ? t('copy.copied') : t('copy.copy')}
                   </Button>
                 </div>
                 <p className="text-neutral-600 mt-2">
@@ -241,7 +243,7 @@ export default function DocsPage() {
               {currentEndpoint.requestBody && (
                 <div className="p-6 border-b border-neutral-200">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-semibold text-neutral-900">Request Body</h3>
+                    <h3 className="font-semibold text-neutral-900">{t('requestBody')}</h3>
                     <Button
                       variant="ghost"
                       size="sm"
@@ -251,7 +253,7 @@ export default function DocsPage() {
                         `${selectedEndpoint}-request`
                       )}
                     >
-                      {copiedEndpoint === `${selectedEndpoint}-request` ? 'Gekopieerd!' : 'Kopieer'}
+                      {copiedEndpoint === `${selectedEndpoint}-request` ? t('copy.copied') : t('copy.copy')}
                     </Button>
                   </div>
                   <div className="bg-neutral-900 text-green-400 p-4 rounded-lg overflow-x-auto">
@@ -265,7 +267,7 @@ export default function DocsPage() {
               {/* Response Example */}
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-semibold text-neutral-900">Response Example</h3>
+                  <h3 className="font-semibold text-neutral-900">{t('responseExample')}</h3>
                   <div className="flex space-x-2">
                     <Button
                       variant="ghost"
@@ -276,10 +278,10 @@ export default function DocsPage() {
                         `${selectedEndpoint}-response`
                       )}
                     >
-                      {copiedEndpoint === `${selectedEndpoint}-response` ? 'Gekopieerd!' : 'Kopieer'}
+                      {copiedEndpoint === `${selectedEndpoint}-response` ? t('copy.copied') : t('copy.copy')}
                     </Button>
                     <Button variant="outline" size="sm" icon={Play}>
-                      Test API
+                      {t('testApi')}
                     </Button>
                   </div>
                 </div>
@@ -295,9 +297,9 @@ export default function DocsPage() {
             <div className="mt-8 space-y-8">
               {/* Authentication */}
               <div id="authentication" className="bg-white rounded-lg shadow-sm border border-neutral-200 p-6">
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">Authentication</h3>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-3">{t('authentication.title')}</h3>
                 <p className="text-neutral-600 mb-4">
-                  Alle API verzoeken vereisen een geldige API key in de request header.
+                  {t('authentication.description')}
                 </p>
                 <div className="bg-neutral-900 text-green-400 p-4 rounded-lg">
                   <pre className="text-sm">
@@ -309,23 +311,22 @@ Content-Type: application/json`}
 
               {/* Rate Limiting */}
               <div id="rate-limiting" className="bg-white rounded-lg shadow-sm border border-neutral-200 p-6">
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">Rate Limiting</h3>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-3">{t('rateLimiting.title')}</h3>
                 <p className="text-neutral-600 mb-4">
-                  De API heeft een rate limit van 1000 verzoeken per uur per API key.
+                  {t('rateLimiting.description')}
                 </p>
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                   <p className="text-yellow-800 text-sm">
-                    <strong>Let op:</strong> Wanneer je de rate limit bereikt, krijg je een 429 status code.
-                    De headers bevatten informatie over wanneer je weer verzoeken kunt doen.
+                    <strong>{t('rateLimiting.note.title')}:</strong> {t('rateLimiting.note.content')}
                   </p>
                 </div>
               </div>
 
               {/* Error Handling */}
               <div id="errors" className="bg-white rounded-lg shadow-sm border border-neutral-200 p-6">
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">Error Handling</h3>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-3">{t('errorHandling.title')}</h3>
                 <p className="text-neutral-600 mb-4">
-                  De API gebruikt standaard HTTP status codes en retourneert gestructureerde error responses.
+                  {t('errorHandling.description')}
                 </p>
                 <div className="bg-neutral-900 text-green-400 p-4 rounded-lg">
                   <pre className="text-sm">

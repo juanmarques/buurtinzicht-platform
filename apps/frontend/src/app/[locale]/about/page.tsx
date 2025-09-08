@@ -13,63 +13,66 @@ import {
   Globe
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
+import { useTranslations } from 'next-intl';
 
 export default function AboutPage() {
+  const t = useTranslations('about');
+
   const values = [
     {
       icon: Target,
-      title: 'Precisie',
-      description: 'We leveren nauwkeurige en betrouwbare data om je te helpen weloverwogen beslissingen te nemen.'
+      title: t('values.precision.title'),
+      description: t('values.precision.description')
     },
     {
       icon: Heart,
-      title: 'Gebruikersgericht',
-      description: 'Jouw behoeften staan centraal. We bouwen tools die echt helpen bij het vinden van je ideale thuis.'
+      title: t('values.userFocused.title'),
+      description: t('values.userFocused.description')
     },
     {
       icon: Zap,
-      title: 'Innovatie',
-      description: 'We gebruiken de nieuwste technologieën om complexe data om te zetten naar begrijpelijke inzichten.'
+      title: t('values.innovation.title'),
+      description: t('values.innovation.description')
     },
     {
       icon: Shield,
-      title: 'Transparantie',
-      description: 'Openheid over onze methodiek en databronnen, zodat je kunt vertrouwen op onze analyses.'
+      title: t('values.transparency.title'),
+      description: t('values.transparency.description')
     }
   ];
 
   const team = [
     {
-      name: 'Sarah De Vries',
-      role: 'CEO & Oprichter',
-      bio: 'Expert in ruimtelijke data-analyse met 10+ jaar ervaring in de vastgoedsector.',
+      name: t('team.sarah.name'),
+      role: t('team.sarah.role'),
+      bio: t('team.sarah.bio'),
       avatar: '👩‍💼'
     },
     {
-      name: 'Tom Janssens',
-      role: 'CTO',
-      bio: 'Technologie-expert gespecialiseerd in GIS-systemen en machine learning.',
+      name: t('team.tom.name'),
+      role: t('team.tom.role'),
+      bio: t('team.tom.bio'),
       avatar: '👨‍💻'
     },
     {
-      name: 'Lisa Chen',
-      role: 'Lead Data Scientist',
-      bio: 'PhD in Stedelijke Planning met focus op demografische trends en leefbaarheid.',
+      name: t('team.lisa.name'),
+      role: t('team.lisa.role'),
+      bio: t('team.lisa.bio'),
       avatar: '👩‍🔬'
     },
     {
-      name: 'Marc Dubois',
-      role: 'Product Manager',
-      bio: '15 jaar ervaring in het ontwikkelen van gebruiksvriendelijke data-platforms.',
+      name: t('team.marc.name'),
+      role: t('team.marc.role'),
+      bio: t('team.marc.bio'),
       avatar: '👨‍💼'
     }
   ];
 
   const stats = [
-    { number: '50.000+', label: 'Tevreden gebruikers' },
-    { number: '11.000+', label: 'Belgische buurten' },
-    { number: '1M+', label: 'Zoekopdrachten verwerkt' },
-    { number: '99.9%', label: 'Beschikbaarheid' }
+    { number: '50.000+', label: t('stats.users') },
+    { number: '11.000+', label: t('stats.neighborhoods') },
+    { number: '1M+', label: t('stats.searches') },
+    { number: '99.9%', label: t('stats.availability') }
   ];
 
   return (
@@ -79,20 +82,19 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-6">
-              Over Buurtinzicht
+              {t('title')}
             </h1>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
-              Wij helpen mensen hun ideale buurt te vinden door complexe data om te zetten naar 
-              begrijpelijke inzichten en gepersonaliseerde aanbevelingen.
+              {t('subtitle')}
             </p>
             <div className="flex items-center justify-center space-x-8">
               <div className="flex items-center">
                 <MapPin className="h-8 w-8 text-primary-600 mr-2" />
-                <span className="text-lg font-medium text-neutral-900">Opgericht in 2020</span>
+                <span className="text-lg font-medium text-neutral-900">{t('founded')}</span>
               </div>
               <div className="flex items-center">
                 <Globe className="h-8 w-8 text-primary-600 mr-2" />
-                <span className="text-lg font-medium text-neutral-900">Brussel, België</span>
+                <span className="text-lg font-medium text-neutral-900">{t('location')}</span>
               </div>
             </div>
           </div>
@@ -103,40 +105,37 @@ export default function AboutPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-neutral-900 mb-6">Onze Missie</h2>
+            <h2 className="text-3xl font-bold text-neutral-900 mb-6">{t('mission.title')}</h2>
             <p className="text-lg text-neutral-600 mb-6">
-              Het vinden van de perfecte buurt om te wonen is een van de belangrijkste beslissingen 
-              in iemands leven. Toch is het vaak moeilijk om objectieve informatie te vinden die 
-              aansluit bij jouw persoonlijke behoeften en voorkeuren.
+              {t('mission.paragraph1')}
             </p>
             <p className="text-lg text-neutral-600 mb-6">
-              Daarom hebben we Buurtinzicht ontwikkeld: een platform dat uitgebreide data over 
-              Belgische buurten combineert met jouw persoonlijke voorkeuren om de beste match te vinden.
+              {t('mission.paragraph2')}
             </p>
             <Link href="/search">
               <Button variant="primary" size="lg">
-                Ontdek je ideale buurt
+                {t('mission.cta')}
               </Button>
             </Link>
           </div>
           <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-neutral-900 mb-4">Wat maakt ons uniek?</h3>
+            <h3 className="text-xl font-semibold text-neutral-900 mb-4">{t('unique.title')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Award className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-neutral-700">Gepersonaliseerde scorecards gebaseerd op jouw voorkeuren</span>
+                <span className="text-neutral-700">{t('unique.item1')}</span>
               </li>
               <li className="flex items-start">
                 <Users className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-neutral-700">Realtime data van betrouwbare overheids- en commerciële bronnen</span>
+                <span className="text-neutral-700">{t('unique.item2')}</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-neutral-700">Interactieve kaarten met gedetailleerde buurtinformatie</span>
+                <span className="text-neutral-700">{t('unique.item3')}</span>
               </li>
               <li className="flex items-start">
                 <Zap className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-neutral-700">AI-gedreven aanbevelingen voor vergelijkbare buurten</span>
+                <span className="text-neutral-700">{t('unique.item4')}</span>
               </li>
             </ul>
           </div>
@@ -147,9 +146,9 @@ export default function AboutPage() {
       <div className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900 mb-4">Onze Waarden</h2>
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">{t('values.title')}</h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Deze kernwaarden sturen alles wat we doen, van productontwerp tot klantenservice.
+              {t('values.subtitle')}
             </p>
           </div>
           
@@ -170,9 +169,9 @@ export default function AboutPage() {
       {/* Stats Section */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-neutral-900 mb-4">Buurtinzicht in cijfers</h2>
+          <h2 className="text-3xl font-bold text-neutral-900 mb-4">{t('stats.title')}</h2>
           <p className="text-lg text-neutral-600">
-            Onze impact tot nu toe
+            {t('stats.subtitle')}
           </p>
         </div>
         
@@ -190,9 +189,9 @@ export default function AboutPage() {
       <div className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900 mb-4">Ons Team</h2>
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">{t('team.title')}</h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Ontmoet de experts die Buurtinzicht mogelijk maken
+              {t('team.subtitle')}
             </p>
           </div>
           
@@ -213,19 +212,19 @@ export default function AboutPage() {
       <div className="bg-primary-600">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Klaar om je ideale buurt te vinden?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('cta.title')}</h2>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Sluit je aan bij duizenden tevreden gebruikers die al hun perfecte thuis hebben gevonden.
+              {t('cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/search">
                 <Button variant="secondary" size="lg">
-                  Begin je zoektocht
+                  {t('cta.start')}
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary-600">
-                  Neem contact op
+                  {t('cta.contact')}
                 </Button>
               </Link>
             </div>

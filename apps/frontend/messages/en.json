@@ -1,0 +1,645 @@
+{
+  "navigation": {
+    "search": "Search Neighborhood",
+    "favorites": "My Favorites",
+    "docs": "API Docs",
+    "pricing": "Pricing",
+    "dashboard": "Dashboard",
+    "about": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy"
+  },
+  "homepage": {
+    "title": "Discover your ideal <span>neighborhood</span> in Belgium",
+    "subtitle": "Make smart housing choices with detailed neighborhood analyses. From safety to amenities - all the information you need in one place.",
+    "searchPlaceholder": "Enter an address, postal code or place name...",
+    "searchButton": "Search",
+    "searchExample": "Try for example: <span>\"Ghent\"</span>, <span>\"1000 Brussels\"</span>, or <span>\"Mechelsestraat 10\"</span>",
+    "forFamily": "For My Family",
+    "familyDescription": "Find the perfect neighborhood for your family with schools, playgrounds and safety.",
+    "forBusiness": "For My Business",
+    "businessDescription": "Discover business opportunities with demographic data and market analyses.",
+    "whyChoose": "Why choose Buurtinzicht?",
+    "whyDescription": "Our platform combines official data with smart analyses to give you the most accurate and current neighborhood information.",
+    "features": {
+      "search": {
+        "title": "Neighborhood Search",
+        "description": "Find your ideal neighborhood with advanced search filters and detailed information about amenities."
+      },
+      "scorecards": {
+        "title": "Detailed Scorecards",
+        "description": "Get comprehensive neighborhood analyses with scores for safety, transport, amenities, and more."
+      },
+      "safety": {
+        "title": "Safety Data",
+        "description": "Up-to-date crime statistics and safety indicators for every neighborhood in Belgium."
+      },
+      "realtime": {
+        "title": "Real-time Data",
+        "description": "Always current information thanks to integration with government data and public sources."
+      },
+      "compare": {
+        "title": "Compare",
+        "description": "Compare multiple neighborhoods side-by-side to make the best choice."
+      }
+    },
+    "cta": {
+      "title": "Ready to find your ideal neighborhood?",
+      "subtitle": "Start discovering neighborhoods in Belgium today. Free scorecards available for new users."
+    }
+  },
+  "common": {
+    "startSearch": "Start searching",
+    "viewOpportunities": "View opportunities",
+    "startFreeSearch": "Start free search",
+    "viewPricing": "View pricing"
+  },
+  "about": {
+    "title": "About Buurtinzicht",
+    "subtitle": "We help people find their ideal neighborhood by turning complex data into understandable insights and personalized recommendations.",
+    "founded": "Founded in 2020",
+    "location": "Brussels, Belgium",
+    "mission": {
+      "title": "Our Mission",
+      "paragraph1": "Finding the perfect neighborhood to live in is one of the most important decisions in a person's life. Yet, it is often difficult to find objective information that matches your personal needs and preferences.",
+      "paragraph2": "That's why we developed Buurtinzicht: a platform that combines comprehensive data about Belgian neighborhoods with your personal preferences to find the best match.",
+      "cta": "Discover your ideal neighborhood"
+    },
+    "unique": {
+      "title": "What makes us unique?",
+      "item1": "Personalized scorecards based on your preferences",
+      "item2": "Real-time data from reliable government and commercial sources",
+      "item3": "Interactive maps with detailed neighborhood information",
+      "item4": "AI-driven recommendations for similar neighborhoods"
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "These core values guide everything we do, from product design to customer service.",
+      "precision": {
+        "title": "Precision",
+        "description": "We provide accurate and reliable data to help you make informed decisions."
+      },
+      "userFocused": {
+        "title": "User-Focused",
+        "description": "Your needs are central. We build tools that truly help in finding your ideal home."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We use the latest technologies to turn complex data into understandable insights."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Openness about our methodology and data sources, so you can trust our analyses."
+      }
+    },
+    "stats": {
+      "title": "Buurtinzicht in numbers",
+      "subtitle": "Our impact so far",
+      "users": "Satisfied users",
+      "neighborhoods": "Belgian neighborhoods",
+      "searches": "Searches processed",
+      "availability": "Availability"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the experts who make Buurtinzicht possible",
+      "sarah": {
+        "name": "Sarah De Vries",
+        "role": "CEO & Founder",
+        "bio": "Expert in spatial data analysis with 10+ years of experience in the real estate sector."
+      },
+      "tom": {
+        "name": "Tom Janssens",
+        "role": "CTO",
+        "bio": "Technology expert specializing in GIS systems and machine learning."
+      },
+      "lisa": {
+        "name": "Lisa Chen",
+        "role": "Lead Data Scientist",
+        "bio": "PhD in Urban Planning with a focus on demographic trends and livability."
+      },
+      "marc": {
+        "name": "Marc Dubois",
+        "role": "Product Manager",
+        "bio": "15 years of experience in developing user-friendly data platforms."
+      }
+    },
+    "cta": {
+      "title": "Ready to find your ideal neighborhood?",
+      "subtitle": "Join thousands of satisfied users who have already found their perfect home.",
+      "start": "Start your search",
+      "contact": "Contact us"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Do you have questions, feedback, or want to collaborate? We'd love to hear from you!",
+    "info": {
+      "title": "Contact Us",
+      "office": {
+        "title": "Head Office",
+        "line1": "Buurtinzicht BV",
+        "line2": "Rue de la Loi 200",
+        "line3": "1000 Brussels, Belgium"
+      },
+      "email": {
+        "title": "Email",
+        "description": "For general inquiries and support"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "Mon-Fri: 9:00 AM - 5:00 PM CET"
+      },
+      "hours": {
+        "title": "Opening Hours",
+        "weekdays": "Monday - Friday: 9:00 AM - 5:00 PM",
+        "weekend": "Weekend: Closed",
+        "support": "For urgent technical issues, we are available 24/7"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How accurate is your neighborhood data?",
+      "q2": "Can I customize my own preferences?",
+      "q3": "Which payment methods do you accept?",
+      "link": "Check out our <a>FAQ page</a> for more answers."
+    },
+    "form": {
+      "title": "Send us a message",
+      "reasonLabel": "What do you want to contact us about?",
+      "reasons": {
+        "general": "General question",
+        "support": "Technical support",
+        "business": "Business collaboration",
+        "data": "Data or API questions",
+        "feedback": "Feedback or suggestions"
+      },
+      "nameLabel": "Name *",
+      "emailLabel": "Email address *",
+      "companyLabel": "Company",
+      "optional": "Optional",
+      "subjectLabel": "Subject *",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Tell us about your question, problem, or idea...",
+      "messageHelper": "The more details you provide, the better we can help you",
+      "privacy": "By filling out this form, you agree to our <a>privacy policy</a>. We only use your data to answer your question.",
+      "submit": "Send message",
+      "submitting": "Sending..."
+    },
+    "submitted": {
+      "title": "Message sent!",
+      "subtitle": "Thank you for your message. We will contact you within 24 hours.",
+      "new": "Send new message"
+    }
+  },
+  "compare": {
+    "title": "Compare Neighborhoods",
+    "subtitle": "Compare up to 4 neighborhoods side-by-side to make the best choice for your lifestyle",
+    "searchPlaceholder": "Search neighborhoods to compare...",
+    "maxNeighborhoods": "You can compare a maximum of 4 neighborhoods",
+    "empty": {
+      "title": "Start comparing",
+      "subtitle": "Search for neighborhoods and add them to see a detailed comparison",
+      "cta": "Discover neighborhoods"
+    },
+    "overview": {
+      "population": "Population",
+      "type": "Type"
+    },
+    "addMore": "Add another neighborhood",
+    "table": {
+      "title": "Detailed Comparison",
+      "subtitle": "Scores on a scale of 1 to 10",
+      "category": "Category"
+    },
+    "actions": {
+      "title": "Next steps",
+      "viewOnMap": "View on map",
+      "export": "Export comparison",
+      "searchMore": "Search more neighborhoods"
+    },
+    "urbanization": {
+      "rural": "Rural",
+      "suburban": "Suburban",
+      "urban": "Urban",
+      "metropolitan": "Metropolitan"
+    },
+    "metrics": {
+      "safety": "Safety",
+      "transport": "Public Transport",
+      "amenities": "Amenities",
+      "culture": "Culture",
+      "nightlife": "Nightlife",
+      "greenSpace": "Green Space",
+      "costOfLiving": "Cost of Living"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}",
+    "settings": "Settings",
+    "newSearch": "New search",
+    "stats": {
+      "searches": "Searches",
+      "favorites": "Favorites",
+      "scorecards": "Scorecards",
+      "thisYear": "This year"
+    },
+    "recentSearches": {
+      "title": "Recent searches",
+      "viewAll": "View all",
+      "empty": "No searches performed yet",
+      "cta": "Start your first search",
+      "results": "{count, plural, one {# result} other {# results}}",
+      "repeat": "Repeat search"
+    },
+    "favorites": {
+      "title": "Favorite neighborhoods",
+      "viewAll": "View all",
+      "empty": "No favorite neighborhoods saved yet",
+      "cta": "Discover neighborhoods",
+      "saved": "Saved on {date}",
+      "view": "View"
+    },
+    "profile": {
+      "membership": "{plan} membership",
+      "memberSince": "Member since",
+      "lastActive": "Last active",
+      "edit": "Edit profile"
+    },
+    "quickActions": {
+      "title": "Quick actions",
+      "search": "Search neighborhoods",
+      "favorites": "My favorites",
+      "scorecards": "View scorecards",
+      "settings": "Settings"
+    },
+    "tip": {
+      "title": "Tip of the day",
+      "content": "Use advanced filters in your search to find neighborhoods that perfectly match your lifestyle!"
+    }
+  },
+  "docs": {
+    "title": "API Documentation",
+    "subtitle": "Learn how to use the Buurtinzicht API to retrieve spatial data and neighborhood information",
+    "quickStats": {
+      "apiType": {
+        "label": "REST API",
+        "value": "JSON responses"
+      },
+      "authentication": {
+        "label": "Authentication",
+        "value": "API key required"
+      },
+      "rateLimit": {
+        "label": "Rate Limit",
+        "value": "1000/hour"
+      },
+      "sdks": {
+        "label": "SDKs",
+        "value": "JavaScript, Python"
+      }
+    },
+    "sidebar": {
+      "endpoints": "Endpoints",
+      "quickLinks": "Quick Links",
+      "authentication": "Authentication",
+      "rateLimiting": "Rate Limiting",
+      "errorHandling": "Error Handling",
+      "sdks": "SDKs & Libraries"
+    },
+    "copy": {
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "requestBody": "Request Body",
+    "responseExample": "Response Example",
+    "testApi": "Test API",
+    "authentication": {
+      "title": "Authentication",
+      "description": "All API requests require a valid API key in the request header."
+    },
+    "rateLimiting": {
+      "title": "Rate Limiting",
+      "description": "The API has a rate limit of 1000 requests per hour per API key.",
+      "note": {
+        "title": "Note",
+        "content": "When you reach the rate limit, you will receive a 429 status code. The headers contain information about when you can make requests again."
+      }
+    },
+    "errorHandling": {
+      "title": "Error Handling",
+      "description": "The API uses standard HTTP status codes and returns structured error responses."
+    },
+    "endpoints": {
+      "search": {
+        "title": "Spatial Search",
+        "description": "Search for neighborhoods within a certain radius of a location"
+      },
+      "neighborhoods": {
+        "title": "Neighborhood Details",
+        "description": "Get detailed information for a specific neighborhood"
+      },
+      "scorecard": {
+        "title": "Generate Scorecard",
+        "description": "Generate a detailed scorecard for a neighborhood"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find quick answers to the most common questions about Buurtinzicht",
+    "searchPlaceholder": "Search in the FAQ...",
+    "categories": {
+      "all": "All categories",
+      "general": "General",
+      "data": "Data & Accuracy",
+      "features": "Features & Usage",
+      "pricing": "Pricing & Subscriptions",
+      "technical": "Technical"
+    },
+    "noResults": {
+      "title": "No results found",
+      "subtitle": "Try another search term or change your category",
+      "clearSearch": "Clear search term",
+      "allCategories": "All categories"
+    },
+    "stats": {
+      "articles": "FAQ articles",
+      "categories": "Categories",
+      "responseTime": "Response time"
+    },
+    "cta": {
+      "title": "Question not answered?",
+      "subtitle": "Our support team is happy to help you with your specific question",
+      "contact": "Contact us",
+      "chat": "Start live chat"
+    },
+    "items": {
+      "whatIs": {
+        "question": "What is Buurtinzicht?",
+        "answer": "Buurtinzicht is a platform that helps you find the ideal neighborhood to live in Belgium. We combine official data with your personal preferences to provide personalized recommendations."
+      },
+      "howItWorks": {
+        "question": "How does the neighborhood matching work?",
+        "answer": "You indicate what is important to you (safety, transport, culture, etc.) and we calculate scores for all neighborhoods based on your preferences. This way you can find neighborhoods that best suit your lifestyle."
+      },
+      "coverage": {
+        "question": "Which areas do you cover?",
+        "answer": "We cover all of Belgium with detailed data for more than 11,000 neighborhoods and districts. From large cities to small villages - all municipalities are included in our database."
+      },
+      "accuracy": {
+        "question": "How accurate is your data?",
+        "answer": "Our data comes from reliable sources such as Statbel, FPS Interior, MIVB/De Lijn/TEC and other official bodies. We update the information regularly to ensure accuracy."
+      },
+      "updates": {
+        "question": "How often is the data updated?",
+        "answer": "Basic demographic data is updated annually. Information on transport, crime and amenities is updated monthly. Price data is updated weekly."
+      },
+      "contribute": {
+        "question": "Can I add or correct data myself?",
+        "answer": "Currently, users cannot change data directly. However, you can report errors or make suggestions via our contact form. We check all reports and adjust the data if necessary."
+      },
+      "preferences": {
+        "question": "Can I adjust my preferences?",
+        "answer": "Yes, you can always change your preferences in your account settings. Your scorecards are automatically recalculated based on your new preferences."
+      },
+      "scorecard": {
+        "question": "What is a scorecard?",
+        "answer": "A scorecard is a personalized report that shows how well a neighborhood suits you. It contains scores for different categories and compares the neighborhood with your ideal profile."
+      },
+      "compare": {
+        "question": "Can I compare neighborhoods?",
+        "answer": "Yes, you can compare up to 4 neighborhoods at the same time. This helps you make an informed choice between different options."
+      },
+      "share": {
+        "question": "Can multiple people share an account?",
+        "answer": "An account is intended for individual use. For families, we recommend setting the preferences together or creating your own account."
+      },
+      "cost": {
+        "question": "What does Buurtinzicht cost?",
+        "answer": "We have a free plan with basic features and paid plans from €19/month. Check out our pricing page for a full overview of features per plan."
+      },
+      "trial": {
+        "question": "Is there a free trial period?",
+        "answer": "The free plan already gives you access to the core features. For paid plans, we offer a 14-day money-back guarantee if you are not satisfied."
+      },
+      "cancel": {
+        "question": "Can I cancel my subscription?",
+        "answer": "Yes, you can cancel your subscription at any time. There are no long-term contracts. You will retain access to paid features until the end of your billing period."
+      },
+      "payment": {
+        "question": "Which payment methods do you accept?",
+        "answer": "We accept all major credit cards (Visa, Mastercard, American Express), SEPA transfers and PayPal. All payments are processed securely."
+      },
+      "mobile": {
+        "question": "Is there a mobile app?",
+        "answer": "We currently do not have a native app, but our website is fully optimized for mobile use and works great on smartphones and tablets."
+      },
+      "browsers": {
+        "question": "Does Buurtinzicht work on all browsers?",
+        "answer": "Yes, we support all modern browsers: Chrome, Firefox, Safari, Edge. For the best experience, we recommend keeping your browser up-to-date."
+      },
+      "api": {
+        "question": "Is there an API available?",
+        "answer": "Yes, we offer a REST API for business users. Contact us for more information about API access and pricing."
+      }
+    }
+  },
+  "favorites": {
+    "title": "Favorite neighborhoods",
+    "subtitle": "You have {count, plural, one {# neighborhood} other {# neighborhoods}} saved to view later",
+    "searchPlaceholder": "Search in your favorites...",
+    "sort": {
+      "newest": "Newest first",
+      "rating": "Highest rating",
+      "name": "Alphabetical"
+    },
+    "filter": {
+      "all": "All types",
+      "metropolitan": "Metropolitan",
+      "urban": "Urban",
+      "suburban": "Suburban",
+      "rural": "Rural"
+    },
+    "noResults": {
+      "title": "No results found",
+      "subtitle": "Try adjusting your search term or changing your filters",
+      "clearSearch": "Clear search term",
+      "clearFilters": "Clear filters"
+    },
+    "empty": {
+      "title": "No favorites yet",
+      "subtitle": "Search for neighborhoods and add them to your favorites to see them here",
+      "cta": "Discover neighborhoods"
+    },
+    "remove": "Remove from favorites",
+    "stats": {
+      "population": "Population",
+      "area": "Area"
+    },
+    "notes": "Your note",
+    "addedOn": "Added on {date}",
+    "actions": {
+      "share": "Share",
+      "scorecard": "Scorecard",
+      "view": "View"
+    },
+    "share": {
+      "text": "Discover this neighborhood: {name} in {municipality}"
+    },
+    "urbanization": {
+      "rural": "Rural",
+      "suburban": "Suburban",
+      "urban": "Urban",
+      "metropolitan": "Metropolitan"
+    }
+  },
+  "pricing": {
+    "title": "Choose the right plan for you",
+    "subtitle": "Start for free or upgrade to a paid plan for access to premium features and unlimited possibilities",
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "save": "Save up to {percentage}%"
+    },
+    "mostPopular": "Most popular",
+    "perMonth": "/month",
+    "perYear": "per year",
+    "save": "Save",
+    "cta": {
+      "startFree": "Start for free",
+      "startToday": "Start today",
+      "viewDemo": "View demo"
+    },
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Perfect for getting started with discovering neighborhoods",
+        "features": {
+          "searches": "5 searches per month",
+          "comparisons": "2 neighborhood comparisons per month",
+          "basicInfo": "Basic neighborhood information",
+          "publicMaps": "Public maps",
+          "favorites": "Up to 3 favorite neighborhoods",
+          "scorecards": "Detailed scorecards",
+          "unlimitedSearches": "Unlimited searches",
+          "premiumData": "Premium data and insights",
+          "apiAccess": "API access",
+          "prioritySupport": "Priority support"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Ideal for home buyers and real estate agents who are serious about their search",
+        "features": {
+          "unlimitedSearches": "Unlimited searches",
+          "unlimitedComparisons": "Unlimited comparisons",
+          "detailedScorecards": "Detailed scorecards",
+          "premiumMaps": "Premium maps and visualizations",
+          "favorites": "Up to 50 favorite neighborhoods",
+          "historicalData": "Historical data and trends",
+          "personalizedRecommendations": "Personalized recommendations",
+          "export": "Export functionality",
+          "apiAccess": "API access (limited)",
+          "prioritySupport": "Priority support"
+        }
+      },
+      "business": {
+        "name": "Business",
+        "description": "For real estate professionals and companies with high-end needs",
+        "features": {
+          "allPro": "Everything from Pro plan",
+          "fullApi": "Full API access",
+          "bulkExport": "Bulk data export",
+          "customReports": "Custom reports",
+          "teamCollaboration": "Team collaboration tools",
+          "whiteLabel": "White-label options",
+          "prioritySupport": "Priority support",
+          "training": "Training and onboarding",
+          "customIntegrations": "Custom integrations",
+          "sla": "SLA guarantees"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Detailed comparison",
+      "subtitle": "Compare all features side-by-side to make the right choice",
+      "features": "Features",
+      "unlimited": "Unlimited",
+      "basic": "Basic",
+      "full": "Full",
+      "fullCustom": "Full + Custom",
+      "perMonth": "{count}/month",
+      "allFormats": "All formats",
+      "search": {
+        "category": "Search & Discover",
+        "features": {
+          "monthlySearches": "Searches per month",
+          "advancedFilters": "Advanced filters",
+          "radiusSearch": "Radius search",
+          "locationSearch": "Location-based search"
+        }
+      },
+      "data": {
+        "category": "Data & Insights",
+        "features": {
+          "basicInfo": "Basic neighborhood information",
+          "detailedScorecards": "Detailed scorecards",
+          "historicalTrends": "Historical trends",
+          "predictiveAnalytics": "Predictive analytics"
+        }
+      },
+      "tools": {
+        "category": "Tools & Features",
+        "features": {
+          "comparisons": "Neighborhood comparisons",
+          "favorites": "Save favorites",
+          "export": "Export functionality",
+          "teamCollaboration": "Team collaboration"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "Can I change my plan at any time?",
+        "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and you will be billed pro-rata."
+      },
+      "q2": {
+        "question": "Is there a free trial period?",
+        "answer": "The free plan already gives you access to the core features. For paid plans, we offer a 14-day money-back guarantee."
+      },
+      "q3": {
+        "question": "Which payment methods do you accept?",
+        "answer": "We accept all major credit cards, SEPA transfer and PayPal for a secure and easy payment experience."
+      },
+      "q4": {
+        "question": "Is my data safe?",
+        "answer": "Absolutely. We use enterprise-grade security and comply with all GDPR guidelines to protect your data."
+      }
+    },
+    "cta": {
+      "title": "Ready to find your ideal neighborhood?",
+      "subtitle": "Join thousands of people who have already found their perfect neighborhood with Buurtinzicht",
+      "startFree": "Start for free",
+      "viewDemo": "View demo"
+    }
+  },
+  "footer": {
+    "description": "Discover and compare Belgian neighborhoods with detailed analyses and insights for smarter housing choices.",
+    "product": {
+      "title": "Product",
+      "search": "Search Neighborhood",
+      "compare": "Compare",
+      "pricing": "Pricing"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "contact": "Contact",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2024 Buurtinzicht. All rights reserved."
+  }
+}

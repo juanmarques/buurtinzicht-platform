@@ -3,8 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { MapPin } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function Footer() {
+  const t = useTranslations('footer');
   return (
     <footer className="bg-neutral-900 text-neutral-300 mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -20,34 +22,33 @@ export function Footer() {
               </span>
             </div>
             <p className="text-neutral-400 mb-6 max-w-md">
-              Ontdek en vergelijk Belgische buurten met gedetailleerde analyses 
-              en inzichten voor slimmere woonkeuzes.
+              {t('description')}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Product</h3>
+            <h3 className="text-white font-semibold mb-4">{t('product.title')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/search" className="hover:text-white transition-colors">Buurt Zoeken</Link></li>
-              <li><Link href="/compare" className="hover:text-white transition-colors">Vergelijken</Link></li>
-              <li><Link href="/pricing" className="hover:text-white transition-colors">Prijzen</Link></li>
+              <li><Link href="/search" className="hover:text-white transition-colors">{t('product.search')}</Link></li>
+              <li><Link href="/compare" className="hover:text-white transition-colors">{t('product.compare')}</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">{t('product.pricing')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Bedrijf</h3>
+            <h3 className="text-white font-semibold mb-4">{t('company.title')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="hover:text-white transition-colors">Over Ons</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{t('company.about')}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{t('company.contact')}</Link></li>
+              <li><Link href="/privacy" className="hover:text-white transition-colors">{t('company.privacy')}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-neutral-800 mt-8 pt-8">
           <p className="text-sm text-neutral-400 text-center">
-            © 2024 Buurtinzicht. Alle rechten voorbehouden.
+            {t('copyright')}
           </p>
         </div>
       </div>
