@@ -13,8 +13,10 @@ import {
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
+  const t = useTranslations('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,11 +29,11 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   const contactReasons = [
-    { value: 'general', label: 'Algemene vraag' },
-    { value: 'support', label: 'Technische ondersteuning' },
-    { value: 'business', label: 'Zakelijke samenwerking' },
-    { value: 'data', label: 'Data of API vragen' },
-    { value: 'feedback', label: 'Feedback of suggesties' }
+    { value: 'general', label: t('form.reasons.general') },
+    { value: 'support', label: t('form.reasons.support') },
+    { value: 'business', label: t('form.reasons.business') },
+    { value: 'data', label: t('form.reasons.data') },
+    { value: 'feedback', label: t('form.reasons.feedback') }
   ];
 
   const handleInputChange = (field: string, value: string) => {
@@ -56,9 +58,9 @@ export default function ContactPage() {
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Send className="h-8 w-8 text-green-600" />
           </div>
-          <h2 className="text-2xl font-bold text-neutral-900 mb-2">Bericht verzonden!</h2>
+          <h2 className="text-2xl font-bold text-neutral-900 mb-2">{t('submitted.title')}</h2>
           <p className="text-neutral-600 mb-6">
-            Bedankt voor je bericht. We nemen binnen 24 uur contact met je op.
+            {t('submitted.subtitle')}
           </p>
           <Button 
             variant="primary" 
@@ -74,7 +76,7 @@ export default function ContactPage() {
               });
             }}
           >
-            Nieuw bericht versturen
+            {t('submitted.new')}
           </Button>
         </div>
       </div>
@@ -88,10 +90,10 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">
-              Contact
+              {t('title')}
             </h1>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Heb je vragen, feedback of wil je samenwerken? We horen graag van je!
+              {t('subtitle')}
             </p>
           </div>
         </div>
@@ -101,7 +103,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div>
-            <h2 className="text-2xl font-bold text-neutral-900 mb-8">Neem contact op</h2>
+            <h2 className="text-2xl font-bold text-neutral-900 mb-8">{t('info.title')}</h2>
             
             <div className="space-y-8">
               {/* Office */}
@@ -110,11 +112,11 @@ export default function ContactPage() {
                   <Building className="h-6 w-6 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-900 mb-1">Hoofdkantoor</h3>
+                  <h3 className="font-semibold text-neutral-900 mb-1">{t('info.office.title')}</h3>
                   <p className="text-neutral-600">
-                    Buurtinzicht BV<br />
-                    Rue de la Loi 200<br />
-                    1000 Brussel, België
+                    {t('info.office.line1')}<br />
+                    {t('info.office.line2')}<br />
+                    {t('info.office.line3')}
                   </p>
                 </div>
               </div>
@@ -125,14 +127,14 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-900 mb-1">Email</h3>
+                  <h3 className="font-semibold text-neutral-900 mb-1">{t('info.email.title')}</h3>
                   <p className="text-neutral-600">
                     <a href="mailto:info@buurtinzicht.be" className="text-primary-600 hover:text-primary-700">
                       info@buurtinzicht.be
                     </a>
                   </p>
                   <p className="text-sm text-neutral-500 mt-1">
-                    Voor algemene vragen en ondersteuning
+                    {t('info.email.description')}
                   </p>
                 </div>
               </div>
@@ -143,14 +145,14 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-900 mb-1">Telefoon</h3>
+                  <h3 className="font-semibold text-neutral-900 mb-1">{t('info.phone.title')}</h3>
                   <p className="text-neutral-600">
                     <a href="tel:+3225551234" className="text-primary-600 hover:text-primary-700">
                       +32 2 555 1234
                     </a>
                   </p>
                   <p className="text-sm text-neutral-500 mt-1">
-                    Ma-Vr: 9:00 - 17:00 CET
+                    {t('info.phone.description')}
                   </p>
                 </div>
               </div>
@@ -161,12 +163,12 @@ export default function ContactPage() {
                   <Clock className="h-6 w-6 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-900 mb-1">Openingstijden</h3>
+                  <h3 className="font-semibold text-neutral-900 mb-1">{t('info.hours.title')}</h3>
                   <div className="text-neutral-600 space-y-1">
-                    <p>Maandag - Vrijdag: 9:00 - 17:00</p>
-                    <p>Weekend: Gesloten</p>
+                    <p>{t('info.hours.weekdays')}</p>
+                    <p>{t('info.hours.weekend')}</p>
                     <p className="text-sm text-neutral-500 mt-1">
-                      Voor spoedeisende technische problemen zijn we 24/7 bereikbaar
+                      {t('info.hours.support')}
                     </p>
                   </div>
                 </div>
@@ -175,23 +177,23 @@ export default function ContactPage() {
 
             {/* Quick Contact Options */}
             <div className="bg-neutral-100 rounded-lg p-6 mt-8">
-              <h3 className="font-semibold text-neutral-900 mb-4">Veelgestelde vragen</h3>
+              <h3 className="font-semibold text-neutral-900 mb-4">{t('faq.title')}</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <HelpCircle className="h-4 w-4 text-neutral-500 mr-2" />
-                  <span className="text-sm text-neutral-600">Hoe nauwkeurig is jullie buurtdata?</span>
+                  <span className="text-sm text-neutral-600">{t('faq.q1')}</span>
                 </div>
                 <div className="flex items-center">
                   <HelpCircle className="h-4 w-4 text-neutral-500 mr-2" />
-                  <span className="text-sm text-neutral-600">Kan ik mijn eigen voorkeuren aanpassen?</span>
+                  <span className="text-sm text-neutral-600">{t('faq.q2')}</span>
                 </div>
                 <div className="flex items-center">
                   <HelpCircle className="h-4 w-4 text-neutral-500 mr-2" />
-                  <span className="text-sm text-neutral-600">Welke betalingsmethoden accepteren jullie?</span>
+                  <span className="text-sm text-neutral-600">{t('faq.q3')}</span>
                 </div>
               </div>
               <p className="text-sm text-neutral-600 mt-4">
-                Bekijk onze <a href="/faq" className="text-primary-600 hover:text-primary-700">FAQ pagina</a> voor meer antwoorden.
+                {t.rich('faq.link', { a: (chunks) => <a href="/faq" className="text-primary-600 hover:text-primary-700">{chunks}</a> })}
               </p>
             </div>
           </div>
@@ -201,14 +203,14 @@ export default function ContactPage() {
             <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-8">
               <div className="flex items-center mb-6">
                 <MessageSquare className="h-6 w-6 text-primary-600 mr-2" />
-                <h2 className="text-xl font-semibold text-neutral-900">Stuur ons een bericht</h2>
+                <h2 className="text-xl font-semibold text-neutral-900">{t('form.title')}</h2>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Contact Reason */}
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-2">
-                    Waarover wil je contact opnemen?
+                    {t('form.reasonLabel')}
                   </label>
                   <select
                     value={formData.contactReason}
@@ -227,13 +229,13 @@ export default function ContactPage() {
                 {/* Name and Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input
-                    label="Naam *"
+                    label={t('form.nameLabel')}
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     required
                   />
                   <Input
-                    label="E-mailadres *"
+                    label={t('form.emailLabel')}
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
@@ -244,13 +246,13 @@ export default function ContactPage() {
                 {/* Company and Subject */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input
-                    label="Bedrijf"
+                    label={t('form.companyLabel')}
                     value={formData.company}
                     onChange={(e) => handleInputChange('company', e.target.value)}
-                    helperText="Optioneel"
+                    helperText={t('form.optional')}
                   />
                   <Input
-                    label="Onderwerp *"
+                    label={t('form.subjectLabel')}
                     value={formData.subject}
                     onChange={(e) => handleInputChange('subject', e.target.value)}
                     required
@@ -260,28 +262,25 @@ export default function ContactPage() {
                 {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
-                    Bericht *
+                    {t('form.messageLabel')}
                   </label>
                   <textarea
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     rows={6}
                     className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                    placeholder="Vertel ons over je vraag, probleem of idee..."
+                    placeholder={t('form.messagePlaceholder')}
                     required
                   />
                   <p className="text-xs text-neutral-500 mt-1">
-                    Hoe meer details je geeft, hoe beter we je kunnen helpen
+                    {t('form.messageHelper')}
                   </p>
                 </div>
 
                 {/* Privacy Notice */}
                 <div className="bg-neutral-50 rounded-lg p-4">
                   <p className="text-sm text-neutral-600">
-                    Door dit formulier in te vullen, ga je akkoord met ons{' '}
-                    <a href="/privacy" className="text-primary-600 hover:text-primary-700">
-                      privacybeleid
-                    </a>. We gebruiken je gegevens alleen om je vraag te beantwoorden.
+                    {t.rich('form.privacy', { a: (chunks) => <a href="/privacy" className="text-primary-600 hover:text-primary-700">{chunks}</a> })}
                   </p>
                 </div>
 
@@ -293,7 +292,7 @@ export default function ContactPage() {
                   icon={Send}
                   className="w-full"
                 >
-                  {isSubmitting ? 'Versturen...' : 'Bericht versturen'}
+                  {isSubmitting ? t('form.submitting') : t('form.submit')}
                 </Button>
               </form>
             </div>

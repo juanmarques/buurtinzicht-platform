@@ -4,15 +4,18 @@ import React from 'react';
 import Link from 'next/link';
 import { Menu, X, MapPin, Search, User, Heart } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const t = useTranslations('navigation');
 
   const navigation = [
-    { name: 'Buurt Zoeken', href: '/search' },
-    { name: 'Mijn Favorieten', href: '/favorites' },
-    { name: 'API Docs', href: '/docs' },
-    { name: 'Prijzen', href: '/pricing' },
+    { name: t('search'), href: '/search' },
+    { name: t('favorites'), href: '/favorites' },
+    { name: t('docs'), href: '/docs' },
+    { name: t('pricing'), href: '/pricing' },
   ];
 
   return (
@@ -42,23 +45,26 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* CTA Buttons & Language Switcher */}
+          <div className="hidden md:flex items-center space-x-3">
             <Link href="/favorites">
               <Button variant="ghost" size="sm" icon={Heart}>
-                Favorieten
+                {t('favorites')}
               </Button>
             </Link>
             <Link href="/dashboard">
               <Button variant="outline" size="sm" icon={User}>
-                Dashboard
+                {t('dashboard')}
               </Button>
             </Link>
             <Link href="/search">
               <Button variant="primary" size="sm" icon={Search}>
-                Zoeken
+                {t('search')}
               </Button>
             </Link>
+            <div className="pl-2 ml-2 border-l border-neutral-200">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -92,16 +98,26 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-2 space-y-2">
+              <Link href="/favorites" className="block">
+                <Button variant="ghost" size="sm" className="w-full" icon={Heart}>
+                  {t('favorites')}
+                </Button>
+              </Link>
               <Link href="/dashboard" className="block">
                 <Button variant="outline" size="sm" className="w-full" icon={User}>
-                  Dashboard
+                  {t('dashboard')}
                 </Button>
               </Link>
               <Link href="/search" className="block">
                 <Button variant="primary" size="sm" className="w-full" icon={Search}>
-                  Begin met zoeken
+                  {t('search')}
                 </Button>
               </Link>
+              <div className="pt-3 mt-3 border-t border-neutral-200">
+                <div className="px-3 py-2">
+                  <LanguageSwitcher />
+                </div>
+              </div>
             </div>
           </div>
         </div>

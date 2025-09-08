@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
+import { useTranslations } from 'next-intl';
 
 interface NeighborhoodComparison {
   nisCode: string;
@@ -40,6 +41,7 @@ interface NeighborhoodComparison {
 }
 
 export default function ComparePage() {
+  const t = useTranslations('compare');
   const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<NeighborhoodComparison[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<NeighborhoodComparison[]>([]);
@@ -122,7 +124,7 @@ export default function ComparePage() {
 
   const addNeighborhood = (neighborhood: NeighborhoodComparison) => {
     if (selectedNeighborhoods.length >= 4) {
-      alert('Je kunt maximaal 4 buurten vergelijken');
+      alert(t('maxNeighborhoods'));
       return;
     }
     
@@ -139,10 +141,10 @@ export default function ComparePage() {
 
   const getUrbanizationLabel = (level: string) => {
     switch (level) {
-      case 'RURAL': return 'Landelijk';
-      case 'SUBURBAN': return 'Voorstedelijk';
-      case 'URBAN': return 'Stedelijk';
-      case 'METROPOLITAN': return 'Grootstedelijk';
+      case 'RURAL': return t('urbanization.rural');
+      case 'SUBURBAN': return t('urbanization.suburban');
+      case 'URBAN': return t('urbanization.urban');
+      case 'METROPOLITAN': return t('urbanization.metropolitan');
       default: return level;
     }
   };
@@ -161,16 +163,7 @@ export default function ComparePage() {
   };
 
   const getMetricLabel = (metric: string) => {
-    switch (metric) {
-      case 'safety': return 'Veiligheid';
-      case 'transport': return 'OV';
-      case 'amenities': return 'Voorzieningen';
-      case 'culture': return 'Cultuur';
-      case 'nightlife': return 'Nachtleven';
-      case 'greenSpace': return 'Groen';
-      case 'costOfLiving': return 'Kosten';
-      default: return metric;
-    }
+    return t(`metrics.${metric}`);
   };
 
   const getScoreColor = (score: number) => {
@@ -191,10 +184,10 @@ export default function ComparePage() {
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 flex items-center justify-center">
               <BarChart3 className="h-8 w-8 mr-3 text-primary-600" />
-              Vergelijk Buurten
+              {t('title')}
             </h1>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Vergelijk tot 4 buurten naast elkaar om de beste keuze voor jouw levensstijl te maken
+              {t('subtitle')}
             </p>
           </div>
 
@@ -204,7 +197,7 @@ export default function ComparePage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-400" />
               <input
                 type="text"
-                placeholder="Zoek buurten om te vergelijken..."
+                placeholder={t('searchPlaceholder')}
                 value={searchTerm}
                 onChange={(e) => {
                   setSearchTerm(e.target.value);
@@ -241,14 +234,14 @@ export default function ComparePage() {
           <div className="text-center py-16">
             <BarChart3 className="h-16 w-16 text-neutral-400 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-neutral-900 mb-2">
-              Begin met vergelijken
+              {t('empty.title')}
             </h2>
             <p className="text-neutral-600 mb-6">
-              Zoek naar buurten en voeg ze toe om een gedetailleerde vergelijking te zien
+              {t('empty.subtitle')}
             </p>
             <Link href="/search">
               <Button variant="primary" size="lg">
-                Ontdek buurten
+                {t('empty.cta')}
               </Button>
             </Link>
           </div>
@@ -272,11 +265,11 @@ export default function ComparePage() {
                   </div>
                   <div className="space-y-2 text-xs">
                     <div className="flex justify-between">
-                      <span className="text-neutral-600">Inwoners:</span>
+                      <span className="text-neutral-600">{t('overview.population')}:</span>
                       <span className="font-medium">{neighborhood.population.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-neutral-600">Type:</span>
+                      <span className="text-neutral-600">{t('overview.type')}:</span>
                       <span className="font-medium">{getUrbanizationLabel(neighborhood.urbanizationLevel)}</span>
                     </div>
                   </div>
@@ -288,7 +281,7 @@ export default function ComparePage() {
                 <div className="bg-white rounded-lg shadow-sm border-2 border-dashed border-neutral-300 p-4 flex items-center justify-center">
                   <div className="text-center">
                     <Plus className="h-8 w-8 text-neutral-400 mx-auto mb-2" />
-                    <p className="text-sm text-neutral-600">Voeg nog een buurt toe</p>
+                    <p className="text-sm text-neutral-600">{t('addMore')}</p>
                   </div>
                 </div>
               )}
@@ -297,8 +290,8 @@ export default function ComparePage() {
             {/* Comparison Table */}
             <div className="bg-white rounded-lg shadow-sm border border-neutral-200 overflow-hidden">
               <div className="p-6 border-b border-neutral-200">
-                <h2 className="text-xl font-semibold text-neutral-900">Gedetailleerde Vergelijking</h2>
-                <p className="text-sm text-neutral-600 mt-1">Scores op een schaal van 1 tot 10</p>
+                <h2 className="text-xl font-semibold text-neutral-900">{t('table.title')}</h2>
+                <p className="text-sm text-neutral-600 mt-1">{t('table.subtitle')}</p>
               </div>
               
               <div className="overflow-x-auto">
@@ -306,7 +299,7 @@ export default function ComparePage() {
                   <thead className="bg-neutral-50">
                     <tr>
                       <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                        Categorie
+                        {t('table.category')}
                       </th>
                       {selectedNeighborhoods.map((neighborhood) => (
                         <th key={neighborhood.nisCode} className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
@@ -362,17 +355,17 @@ export default function ComparePage() {
 
             {/* Actions */}
             <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-6">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-4">Volgende stappen</h3>
+              <h3 className="text-lg font-semibold text-neutral-900 mb-4">{t('actions.title')}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Button variant="outline" className="flex items-center justify-center" icon={MapPin}>
-                  Bekijk op kaart
+                  {t('actions.viewOnMap')}
                 </Button>
                 <Button variant="outline" className="flex items-center justify-center" icon={BarChart3}>
-                  Exporteer vergelijking
+                  {t('actions.export')}
                 </Button>
                 <Link href="/search">
                   <Button variant="primary" className="w-full flex items-center justify-center" iconPosition="right" icon={ArrowRight}>
-                    Zoek meer buurten
+                    {t('actions.searchMore')}
                   </Button>
                 </Link>
               </div>
