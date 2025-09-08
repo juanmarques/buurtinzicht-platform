@@ -1,0 +1,285 @@
+spring:
+  application:
+    name: buurtinzicht-backend
+  
+  profiles:
+    active: dev
+  
+  # Database Configuration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/buurtinzicht
+    username: buurtinzicht
+    password: buurtinzicht123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 300000
+      max-lifetime: 1200000
+  
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisPG10Dialect
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          batch_size: 25
+        order_inserts: true
+        order_updates: true
+        batch_versioned_data: true
+  
+  # Flyway Configuration
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    schemas: public
+  
+  # Redis Configuration
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: redis123
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+  
+  # Cache Configuration
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000 # 10 minutes
+      cache-null-values: false
+  
+  # Kafka Configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: buurtinzicht-backend
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.buurtinzicht.events"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+      retries: 3
+      properties:
+        enable.idempotence: true
+  
+  # Security Configuration
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/buurtinzicht
+          jwk-set-uri: http://localhost:8080/realms/buurtinzicht/protocol/openid-connect/certs
+  
+  # WebSocket Configuration
+  websocket:
+    allowed-origins: "http://localhost:3000"
+  
+  # JSON Configuration
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      indent-output: true
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: NON_NULL
+
+# Server Configuration
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/json,application/javascript
+  error:
+    include-message: on_param
+    include-binding-errors: on_param
+
+# Management / Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,env,configprops
+  endpoint:
+    health:
+      show-details: when-authorized
+      probes:
+        enabled: true
+  health:
+    redis:
+      enabled: true
+    db:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  tracing:
+    sampling:
+      probability: 1.0
+
+# Logging Configuration
+logging:
+  level:
+    com.buurtinzicht: INFO
+    org.springframework.kafka: WARN
+    org.hibernate.SQL: WARN
+    org.hibernate.type.descriptor.sql.BasicBinder: WARN
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/buurtinzicht-backend.log
+
+# OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  info:
+    title: Buurtinzicht Backend API
+    description: REST API for the Buurtinzicht neighborhood insights platform
+    version: 1.0.0
+    contact:
+      name: Buurtinzicht Team
+      email: info@buurtinzicht.be
+  servers:
+    - url: http://localhost:8080/api
+      description: Development server
+
+# Application Configuration
+app:
+  cors:
+    allowed-origins: 
+      - http://localhost:3000
+      - http://localhost:3001
+    allowed-methods: GET,POST,PUT,DELETE,PATCH,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+    max-age: 3600
+  
+  # Belgian Government API Configuration
+  belgian-apis:
+    reip:
+      base-url: https://www.reip.be/api
+      timeout: 10000
+      retry-attempts: 3
+    statbel:
+      base-url: https://statbel.fgov.be/api
+      timeout: 10000
+      retry-attempts: 3
+    vmm:
+      base-url: https://www.vmm.be/api
+      timeout: 10000
+      retry-attempts: 3
+    iris:
+      base-url: https://data.iris.brussels/api
+      timeout: 10000
+      retry-attempts: 3
+
+# Belgian Government API Integration Configuration
+belgian-api:
+  statbel:
+    base-url: ${STATBEL_BASE_URL:https://api.statbel.fgov.be/v1}
+    api-key: ${STATBEL_API_KEY:}
+  geo6:
+    base-url: ${GEO6_BASE_URL:https://api-v2.geo6.be}
+    jwt-token: ${GEO6_JWT_TOKEN:}
+  bpost:
+    base-url: ${BPOST_BASE_URL:https://api.bpost.be/services/shm}
+    api-key: ${BPOST_API_KEY:}
+  timeout:
+    connect: ${BELGIAN_API_CONNECT_TIMEOUT:10000}
+    read: ${BELGIAN_API_READ_TIMEOUT:30000}
+  
+  # ML Service Configuration
+  ml-service:
+    base-url: http://localhost:8000
+    timeout: 30000
+    
+  # File Upload Configuration
+  file:
+    upload-dir: data/uploads
+    max-file-size: 10MB
+    max-request-size: 10MB
+  
+  # Caching Configuration
+  cache:
+    scorecard-ttl: 3600 # 1 hour
+    api-data-ttl: 1800 # 30 minutes
+    user-preferences-ttl: 7200 # 2 hours
+
+---
+# Development Profile
+spring:
+  config:
+    activate:
+      on-profile: dev
+  
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+logging:
+  level:
+    com.buurtinzicht: DEBUG
+    org.hibernate.SQL: DEBUG
+
+---
+# Test Profile  
+spring:
+  config:
+    activate:
+      on-profile: test
+  
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+  
+  flyway:
+    enabled: false
+
+---
+# Production Profile
+spring:
+  config:
+    activate:
+      on-profile: prod
+  
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    root: WARN
+    com.buurtinzicht: INFO
