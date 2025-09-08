@@ -1,0 +1,645 @@
+{
+  "navigation": {
+    "search": "Rechercher Quartier",
+    "favorites": "Mes Favoris",
+    "docs": "API Docs",
+    "pricing": "Tarifs",
+    "dashboard": "Tableau de bord",
+    "about": "À propos",
+    "contact": "Contact",
+    "privacy": "Confidentialité"
+  },
+  "homepage": {
+    "title": "Découvrez votre <span>quartier</span> idéal en Belgique",
+    "subtitle": "Faites des choix immobiliers intelligents avec des analyses détaillées de quartiers. De la sécurité aux commodités - toutes les informations dont vous avez besoin en un seul endroit.",
+    "searchPlaceholder": "Entrez une adresse, code postal ou nom de lieu...",
+    "searchButton": "Rechercher",
+    "searchExample": "Essayez par exemple: <span>\"Gand\"</span>, <span>\"1000 Bruxelles\"</span>, ou <span>\"Rue de la Loi 10\"</span>",
+    "forFamily": "Pour Ma Famille",
+    "familyDescription": "Trouvez le quartier parfait pour votre famille avec écoles, aires de jeux et sécurité.",
+    "forBusiness": "Pour Mon Entreprise",
+    "businessDescription": "Découvrez les opportunités commerciales avec des données démographiques et des analyses de marché.",
+    "whyChoose": "Pourquoi choisir Buurtinzicht?",
+    "whyDescription": "Notre plateforme combine des données officielles avec des analyses intelligentes pour vous donner les informations de quartier les plus précises et actuelles.",
+    "features": {
+      "search": {
+        "title": "Recherche de quartier",
+        "description": "Trouvez votre quartier idéal avec des filtres de recherche avancés et des informations détaillées sur les commodités."
+      },
+      "scorecards": {
+        "title": "Tableaux de bord détaillés",
+        "description": "Obtenez des analyses complètes de quartier avec des scores pour la sécurité, les transports, les commodités, et plus encore."
+      },
+      "safety": {
+        "title": "Données de sécurité",
+        "description": "Statistiques de criminalité à jour et indicateurs de sécurité pour chaque quartier en Belgique."
+      },
+      "realtime": {
+        "title": "Données en temps réel",
+        "description": "Informations toujours à jour grâce à l'intégration avec les données gouvernementales et les sources publiques."
+      },
+      "compare": {
+        "title": "Comparer",
+        "description": "Comparez plusieurs quartiers côte à côte pour faire le meilleur choix."
+      }
+    },
+    "cta": {
+      "title": "Prêt à trouver votre quartier idéal?",
+      "subtitle": "Commencez à découvrir des quartiers en Belgique dès aujourd'hui. Tableaux de bord gratuits disponibles pour les nouveaux utilisateurs."
+    }
+  },
+  "common": {
+    "startSearch": "Commencer la recherche",
+    "viewOpportunities": "Voir les opportunités",
+    "startFreeSearch": "Commencer recherche gratuite",
+    "viewPricing": "Voir les tarifs"
+  },
+  "about": {
+    "title": "À propos de Buurtinzicht",
+    "subtitle": "Nous aidons les gens à trouver leur quartier idéal en transformant des données complexes en informations compréhensibles et en recommandations personnalisées.",
+    "founded": "Fondé en 2020",
+    "location": "Bruxelles, Belgique",
+    "mission": {
+      "title": "Notre Mission",
+      "paragraph1": "Trouver le quartier parfait pour vivre est l'une des décisions les plus importantes dans la vie d'une personne. Pourtant, il est souvent difficile de trouver des informations objectives qui correspondent à vos besoins et préférences personnels.",
+      "paragraph2": "C'est pourquoi nous avons développé Buurtinzicht: une plateforme qui combine des données complètes sur les quartiers belges avec vos préférences personnelles pour trouver la meilleure correspondance.",
+      "cta": "Découvrez votre quartier idéal"
+    },
+    "unique": {
+      "title": "Ce qui nous rend uniques?",
+      "item1": "Tableaux de bord personnalisés en fonction de vos préférences",
+      "item2": "Données en temps réel provenant de sources gouvernementales et commerciales fiables",
+      "item3": "Cartes interactives avec des informations détaillées sur le quartier",
+      "item4": "Recommandations basées sur l'IA pour des quartiers similaires"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Ces valeurs fondamentales guident tout ce que nous faisons, de la conception du produit au service client.",
+      "precision": {
+        "title": "Précision",
+        "description": "Nous fournissons des données précises et fiables pour vous aider à prendre des décisions éclairées."
+      },
+      "userFocused": {
+        "title": "Centré sur l'utilisateur",
+        "description": "Vos besoins sont au cœur de nos préoccupations. Nous créons des outils qui aident vraiment à trouver votre maison idéale."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous utilisons les dernières technologies pour transformer des données complexes en informations compréhensibles."
+      },
+      "transparency": {
+        "title": "Transparence",
+        "description": "Ouverture sur notre méthodologie et nos sources de données, afin que vous puissiez faire confiance à nos analyses."
+      }
+    },
+    "stats": {
+      "title": "Buurtinzicht en chiffres",
+      "subtitle": "Notre impact jusqu'à présent",
+      "users": "Utilisateurs satisfaits",
+      "neighborhoods": "Quartiers belges",
+      "searches": "Recherches traitées",
+      "availability": "Disponibilité"
+    },
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Rencontrez les experts qui rendent Buurtinzicht possible",
+      "sarah": {
+        "name": "Sarah De Vries",
+        "role": "PDG & Fondatrice",
+        "bio": "Experte en analyse de données spatiales avec plus de 10 ans d'expérience dans le secteur immobilier."
+      },
+      "tom": {
+        "name": "Tom Janssens",
+        "role": "CTO",
+        "bio": "Expert en technologie spécialisé dans les systèmes SIG et l'apprentissage automatique."
+      },
+      "lisa": {
+        "name": "Lisa Chen",
+        "role": "Scientifique des données principale",
+        "bio": "Doctorat en urbanisme avec un focus sur les tendances démographiques et la qualité de vie."
+      },
+      "marc": {
+        "name": "Marc Dubois",
+        "role": "Chef de produit",
+        "bio": "15 ans d'expérience dans le développement de plateformes de données conviviales."
+      }
+    },
+    "cta": {
+      "title": "Prêt à trouver votre quartier idéal?",
+      "subtitle": "Rejoignez des milliers d'utilisateurs satisfaits qui ont déjà trouvé leur maison parfaite.",
+      "start": "Commencez votre recherche",
+      "contact": "Contactez-nous"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Avez-vous des questions, des commentaires ou souhaitez-vous collaborer? Nous aimerions avoir de vos nouvelles!",
+    "info": {
+      "title": "Contactez-nous",
+      "office": {
+        "title": "Siège social",
+        "line1": "Buurtinzicht BV",
+        "line2": "Rue de la Loi 200",
+        "line3": "1000 Bruxelles, Belgique"
+      },
+      "email": {
+        "title": "E-mail",
+        "description": "Pour les demandes générales et le support"
+      },
+      "phone": {
+        "title": "Téléphone",
+        "description": "Lun-Ven: 9h00 - 17h00 CET"
+      },
+      "hours": {
+        "title": "Heures d'ouverture",
+        "weekdays": "Lundi - Vendredi: 9h00 - 17h00",
+        "weekend": "Weekend: Fermé",
+        "support": "Pour les problèmes techniques urgents, nous sommes disponibles 24/7"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "q1": "Quelle est la précision de vos données de quartier?",
+      "q2": "Puis-je personnaliser mes propres préférences?",
+      "q3": "Quels modes de paiement acceptez-vous?",
+      "link": "Consultez notre <a>page FAQ</a> pour plus de réponses."
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "reasonLabel": "Pourquoi souhaitez-vous nous contacter?",
+      "reasons": {
+        "general": "Question générale",
+        "support": "Support technique",
+        "business": "Collaboration commerciale",
+        "data": "Questions sur les données ou l'API",
+        "feedback": "Commentaires ou suggestions"
+      },
+      "nameLabel": "Nom *",
+      "emailLabel": "Adresse e-mail *",
+      "companyLabel": "Entreprise",
+      "optional": "Optionnel",
+      "subjectLabel": "Sujet *",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Parlez-nous de votre question, problème ou idée...",
+      "messageHelper": "Plus vous donnez de détails, mieux nous pourrons vous aider",
+      "privacy": "En remplissant ce formulaire, vous acceptez notre <a>politique de confidentialité</a>. Nous n'utilisons vos données que pour répondre à votre question.",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours..."
+    },
+    "submitted": {
+      "title": "Message envoyé!",
+      "subtitle": "Merci pour votre message. Nous vous contacterons dans les 24 heures.",
+      "new": "Envoyer un nouveau message"
+    }
+  },
+  "compare": {
+    "title": "Comparer les quartiers",
+    "subtitle": "Comparez jusqu'à 4 quartiers côte à côte pour faire le meilleur choix pour votre style de vie",
+    "searchPlaceholder": "Rechercher des quartiers à comparer...",
+    "maxNeighborhoods": "Vous pouvez comparer un maximum de 4 quartiers",
+    "empty": {
+      "title": "Commencer à comparer",
+      "subtitle": "Recherchez des quartiers et ajoutez-les pour voir une comparaison détaillée",
+      "cta": "Découvrir les quartiers"
+    },
+    "overview": {
+      "population": "Population",
+      "type": "Type"
+    },
+    "addMore": "Ajouter un autre quartier",
+    "table": {
+      "title": "Comparaison détaillée",
+      "subtitle": "Scores sur une échelle de 1 à 10",
+      "category": "Catégorie"
+    },
+    "actions": {
+      "title": "Prochaines étapes",
+      "viewOnMap": "Voir sur la carte",
+      "export": "Exporter la comparaison",
+      "searchMore": "Rechercher plus de quartiers"
+    },
+    "urbanization": {
+      "rural": "Rural",
+      "suburban": "Suburbain",
+      "urban": "Urbain",
+      "metropolitan": "Métropolitain"
+    },
+    "metrics": {
+      "safety": "Sécurité",
+      "transport": "Transport en commun",
+      "amenities": "Commodités",
+      "culture": "Culture",
+      "nightlife": "Vie nocturne",
+      "greenSpace": "Espaces verts",
+      "costOfLiving": "Coût de la vie"
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue, {name}",
+    "settings": "Paramètres",
+    "newSearch": "Nouvelle recherche",
+    "stats": {
+      "searches": "Recherches",
+      "favorites": "Favoris",
+      "scorecards": "Tableaux de bord",
+      "thisYear": "Cette année"
+    },
+    "recentSearches": {
+      "title": "Recherches récentes",
+      "viewAll": "Voir tout",
+      "empty": "Aucune recherche effectuée pour le moment",
+      "cta": "Commencez votre première recherche",
+      "results": "{count, plural, one {# résultat} other {# résultats}}",
+      "repeat": "Répéter la recherche"
+    },
+    "favorites": {
+      "title": "Quartiers favoris",
+      "viewAll": "Voir tout",
+      "empty": "Aucun quartier favori enregistré pour le moment",
+      "cta": "Découvrir les quartiers",
+      "saved": "Enregistré le {date}",
+      "view": "Voir"
+    },
+    "profile": {
+      "membership": "Abonnement {plan}",
+      "memberSince": "Membre depuis",
+      "lastActive": "Dernière activité",
+      "edit": "Modifier le profil"
+    },
+    "quickActions": {
+      "title": "Actions rapides",
+      "search": "Rechercher des quartiers",
+      "favorites": "Mes favoris",
+      "scorecards": "Voir les tableaux de bord",
+      "settings": "Paramètres"
+    },
+    "tip": {
+      "title": "Conseil du jour",
+      "content": "Utilisez des filtres avancés dans votre recherche pour trouver des quartiers qui correspondent parfaitement à votre style de vie!"
+    }
+  },
+  "docs": {
+    "title": "Documentation de l'API",
+    "subtitle": "Apprenez à utiliser l'API Buurtinzicht pour récupérer des données spatiales et des informations sur les quartiers",
+    "quickStats": {
+      "apiType": {
+        "label": "API REST",
+        "value": "Réponses JSON"
+      },
+      "authentication": {
+        "label": "Authentification",
+        "value": "Clé API requise"
+      },
+      "rateLimit": {
+        "label": "Limite de taux",
+        "value": "1000/heure"
+      },
+      "sdks": {
+        "label": "SDKs",
+        "value": "JavaScript, Python"
+      }
+    },
+    "sidebar": {
+      "endpoints": "Endpoints",
+      "quickLinks": "Liens rapides",
+      "authentication": "Authentification",
+      "rateLimiting": "Limitation de débit",
+      "errorHandling": "Gestion des erreurs",
+      "sdks": "SDKs & Bibliothèques"
+    },
+    "copy": {
+      "copy": "Copier",
+      "copied": "Copié!"
+    },
+    "requestBody": "Corps de la requête",
+    "responseExample": "Exemple de réponse",
+    "testApi": "Tester l'API",
+    "authentication": {
+      "title": "Authentification",
+      "description": "Toutes les demandes d'API nécessitent une clé d'API valide dans l'en-tête de la requête."
+    },
+    "rateLimiting": {
+      "title": "Limitation de débit",
+      "description": "L'API a une limite de débit de 1000 requêtes par heure et par clé API.",
+      "note": {
+        "title": "Remarque",
+        "content": "Lorsque vous atteignez la limite de débit, vous recevrez un code d'état 429. Les en-têtes contiennent des informations sur le moment où vous pouvez à nouveau faire des demandes."
+      }
+    },
+    "errorHandling": {
+      "title": "Gestion des erreurs",
+      "description": "L'API utilise des codes d'état HTTP standard et renvoie des réponses d'erreur structurées."
+    },
+    "endpoints": {
+      "search": {
+        "title": "Recherche spatiale",
+        "description": "Rechercher des quartiers dans un certain rayon d'un emplacement"
+      },
+      "neighborhoods": {
+        "title": "Détails du quartier",
+        "description": "Obtenir des informations détaillées pour un quartier spécifique"
+      },
+      "scorecard": {
+        "title": "Générer un tableau de bord",
+        "description": "Générer un tableau de bord détaillé pour un quartier"
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "subtitle": "Trouvez des réponses rapides aux questions les plus courantes sur Buurtinzicht",
+    "searchPlaceholder": "Rechercher dans la FAQ...",
+    "categories": {
+      "all": "Toutes les catégories",
+      "general": "Général",
+      "data": "Données & Précision",
+      "features": "Fonctionnalités & Utilisation",
+      "pricing": "Tarifs & Abonnements",
+      "technical": "Technique"
+    },
+    "noResults": {
+      "title": "Aucun résultat trouvé",
+      "subtitle": "Essayez un autre terme de recherche ou changez de catégorie",
+      "clearSearch": "Effacer le terme de recherche",
+      "allCategories": "Toutes les catégories"
+    },
+    "stats": {
+      "articles": "Articles FAQ",
+      "categories": "Catégories",
+      "responseTime": "Temps de réponse"
+    },
+    "cta": {
+      "title": "Question sans réponse?",
+      "subtitle": "Notre équipe de support se fera un plaisir de vous aider avec votre question spécifique",
+      "contact": "Contactez-nous",
+      "chat": "Démarrer le chat en direct"
+    },
+    "items": {
+      "whatIs": {
+        "question": "Qu'est-ce que Buurtinzicht?",
+        "answer": "Buurtinzicht est une plateforme qui vous aide à trouver le quartier idéal pour vivre en Belgique. Nous combinons des données officielles avec vos préférences personnelles pour fournir des recommandations personnalisées."
+      },
+      "howItWorks": {
+        "question": "Comment fonctionne la correspondance de quartier?",
+        "answer": "Vous indiquez ce qui est important pour vous (sécurité, transport, culture, etc.) et nous calculons des scores for all neighborhoods based on your preferences. This way you can find neighborhoods that best suit your lifestyle."
+      },
+      "coverage": {
+        "question": "Quelles zones couvrez-vous?",
+        "answer": "Nous couvrons toute la Belgique avec des données détaillées pour plus de 11 000 quartiers et districts. Des grandes villes aux petits villages - toutes les municipalités sont incluses dans notre base de données."
+      },
+      "accuracy": {
+        "question": "Quelle est la précision de vos données?",
+        "answer": "Nos données proviennent de sources fiables telles que Statbel, SPF Intérieur, MIVB/De Lijn/TEC et d'autres organismes officiels. Nous mettons à jour les informations régulièrement pour garantir leur exactitude."
+      },
+      "updates": {
+        "question": "À quelle fréquence les données sont-elles mises à jour?",
+        "answer": "Les données démographiques de base sont mises à jour annuellement. Les informations sur les transports, la criminalité et les commodités sont mises à jour mensuellement. Les données sur les prix sont mises à jour chaque semaine."
+      },
+      "contribute": {
+        "question": "Puis-je ajouter ou corriger des données moi-même?",
+        "answer": "Actuellement, les utilisateurs ne peuvent pas modifier directement les données. Cependant, vous pouvez signaler des erreurs ou faire des suggestions via notre formulaire de contact. Nous vérifions tous les rapports et ajustons les données si nécessaire."
+      },
+      "preferences": {
+        "question": "Puis-je ajuster mes préférences?",
+        "answer": "Oui, vous pouvez toujours modifier vos préférences dans les paramètres de votre compte. Vos tableaux de bord sont automatiquement recalculés en fonction de vos nouvelles préférences."
+      },
+      "scorecard": {
+        "question": "Qu'est-ce qu'un tableau de bord?",
+        "answer": "Un tableau de bord est un rapport personnalisé qui montre à quel point un quartier vous convient. Il contient des scores pour différentes catégories et compare le quartier à votre profil idéal."
+      },
+      "compare": {
+        "question": "Puis-je comparer les quartiers?",
+        "answer": "Oui, vous pouvez comparer jusqu'à 4 quartiers en même temps. Cela vous aide à faire un choix éclairé entre différentes options."
+      },
+      "share": {
+        "question": "Plusieurs personnes peuvent-elles partager un compte?",
+        "answer": "Un compte est destiné à un usage individuel. Pour les familles, nous recommandons de définir les préférences ensemble ou de créer votre propre compte."
+      },
+      "cost": {
+        "question": "Combien coûte Buurtinzicht?",
+        "answer": "Nous avons un plan gratuit avec des fonctionnalités de base et des plans payants à partir de 19 €/mois. Consultez notre page de tarification pour un aperçu complet des fonctionnalités par plan."
+      },
+      "trial": {
+        "question": "Y a-t-il une période d'essai gratuite?",
+        "answer": "Le plan gratuit vous donne déjà accès aux fonctionnalités de base. Pour les plans payants, nous offrons une garantie de remboursement de 14 jours si vous n'êtes pas satisfait."
+      },
+      "cancel": {
+        "question": "Puis-je annuler mon abonnement?",
+        "answer": "Oui, vous pouvez annuler votre abonnement à tout moment. Il n'y a pas de contrats à long terme. Vous conserverez l'accès aux fonctionnalités payantes jusqu'à la fin de votre période de facturation."
+      },
+      "payment": {
+        "question": "Quels modes de paiement acceptez-vous?",
+        "answer": "Nous acceptons toutes les principales cartes de crédit (Visa, Mastercard, American Express), les virements SEPA et PayPal. Tous les paiements sont traités en toute sécurité."
+      },
+      "mobile": {
+        "question": "Existe-t-il une application mobile?",
+        "answer": "Nous n'avons actuellement pas d'application native, mais notre site Web est entièrement optimisé pour une utilisation mobile et fonctionne parfaitement sur les smartphones et les tablettes."
+      },
+      "browsers": {
+        "question": "Buurtinzicht fonctionne-t-il sur tous les navigateurs?",
+        "answer": "Oui, nous prenons en charge tous les navigateurs modernes: Chrome, Firefox, Safari, Edge. Pour la meilleure expérience, nous vous recommandons de maintenir votre navigateur à jour."
+      },
+      "api": {
+        "question": "Une API est-elle disponible?",
+        "answer": "Oui, nous proposons une API REST pour les utilisateurs professionnels. Contactez-nous pour plus d'informations sur l'accès à l'API et la tarification."
+      }
+    }
+  },
+  "favorites": {
+    "title": "Quartiers favoris",
+    "subtitle": "Vous avez {count, plural, one {# quartier sauvegardé} other {# quartiers sauvegardés}} pour le voir plus tard",
+    "searchPlaceholder": "Rechercher dans vos favoris...",
+    "sort": {
+      "newest": "Le plus récent en premier",
+      "rating": "Meilleure note",
+      "name": "Alphabétique"
+    },
+    "filter": {
+      "all": "Tous les types",
+      "metropolitan": "Métropolitain",
+      "urban": "Urbain",
+      "suburban": "Suburbain",
+      "rural": "Rural"
+    },
+    "noResults": {
+      "title": "Aucun résultat trouvé",
+      "subtitle": "Essayez de modifier votre terme de recherche ou de modifier vos filtres",
+      "clearSearch": "Effacer le terme de recherche",
+      "clearFilters": "Effacer les filtres"
+    },
+    "empty": {
+      "title": "Pas encore de favoris",
+      "subtitle": "Recherchez des quartiers et ajoutez-les à vos favoris pour les voir ici",
+      "cta": "Découvrir les quartiers"
+    },
+    "remove": "Retirer des favoris",
+    "stats": {
+      "population": "Population",
+      "area": "Superficie"
+    },
+    "notes": "Votre note",
+    "addedOn": "Ajouté le {date}",
+    "actions": {
+      "share": "Partager",
+      "scorecard": "Tableau de bord",
+      "view": "Voir"
+    },
+    "share": {
+      "text": "Découvrez ce quartier: {name} à {municipality}"
+    },
+    "urbanization": {
+      "rural": "Rural",
+      "suburban": "Suburbain",
+      "urban": "Urbain",
+      "metropolitan": "Métropolitain"
+    }
+  },
+  "pricing": {
+    "title": "Choisissez le plan qui vous convient",
+    "subtitle": "Commencez gratuitement ou passez à un plan payant pour accéder à des fonctionnalités premium et à des possibilités illimitées",
+    "billing": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "save": "Économisez jusqu'à {percentage}%"
+    },
+    "mostPopular": "Le plus populaire",
+    "perMonth": "/mois",
+    "perYear": "par an",
+    "save": "Économisez",
+    "cta": {
+      "startFree": "Commencez gratuitement",
+      "startToday": "Commencez aujourd'hui",
+      "viewDemo": "Voir la démo"
+    },
+    "plans": {
+      "free": {
+        "name": "Gratuit",
+        "description": "Parfait pour commencer à découvrir les quartiers",
+        "features": {
+          "searches": "5 recherches par mois",
+          "comparisons": "2 comparaisons de quartiers par mois",
+          "basicInfo": "Informations de base sur le quartier",
+          "publicMaps": "Cartes publiques",
+          "favorites": "Jusqu'à 3 quartiers favoris",
+          "scorecards": "Tableaux de bord détaillés",
+          "unlimitedSearches": "Recherches illimitées",
+          "premiumData": "Données et informations premium",
+          "apiAccess": "Accès API",
+          "prioritySupport": "Support prioritaire"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Idéal pour les acheteurs de maison et les agents immobiliers qui recherchent sérieusement",
+        "features": {
+          "unlimitedSearches": "Recherches illimitées",
+          "unlimitedComparisons": "Comparaisons illimitées",
+          "detailedScorecards": "Tableaux de bord détaillés",
+          "premiumMaps": "Cartes et visualisations premium",
+          "favorites": "Jusqu'à 50 quartiers favoris",
+          "historicalData": "Données historiques et tendances",
+          "personalizedRecommendations": "Recommandations personnalisées",
+          "export": "Fonctionnalité d'exportation",
+          "apiAccess": "Accès API (limité)",
+          "prioritySupport": "Support prioritaire"
+        }
+      },
+      "business": {
+        "name": "Business",
+        "description": "Pour les professionnels de l'immobilier et les entreprises ayant des besoins haut de gamme",
+        "features": {
+          "allPro": "Tout du plan Pro",
+          "fullApi": "Accès API complet",
+          "bulkExport": "Exportation de données en masse",
+          "customReports": "Rapports personnalisés",
+          "teamCollaboration": "Outils de collaboration d'équipe",
+          "whiteLabel": "Options de marque blanche",
+          "prioritySupport": "Support prioritaire",
+          "training": "Formation et intégration",
+          "customIntegrations": "Intégrations personnalisées",
+          "sla": "Garanties SLA"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Comparaison détaillée",
+      "subtitle": "Comparez toutes les fonctionnalités côte à côte pour faire le bon choix",
+      "features": "Fonctionnalités",
+      "unlimited": "Illimité",
+      "basic": "De base",
+      "full": "Complet",
+      "fullCustom": "Complet + Personnalisé",
+      "perMonth": "{count}/mois",
+      "allFormats": "Tous les formats",
+      "search": {
+        "category": "Rechercher & Découvrir",
+        "features": {
+          "monthlySearches": "Recherches par mois",
+          "advancedFilters": "Filtres avancés",
+          "radiusSearch": "Recherche par rayon",
+          "locationSearch": "Recherche basée sur la localisation"
+        }
+      },
+      "data": {
+        "category": "Données & Informations",
+        "features": {
+          "basicInfo": "Informations de base sur le quartier",
+          "detailedScorecards": "Tableaux de bord détaillés",
+          "historicalTrends": "Tendances historiques",
+          "predictiveAnalytics": "Analyses prédictives"
+        }
+      },
+      "tools": {
+        "category": "Outils & Fonctionnalités",
+        "features": {
+          "comparisons": "Comparaisons de quartiers",
+          "favorites": "Enregistrer les favoris",
+          "export": "Fonctionnalité d'exportation",
+          "teamCollaboration": "Collaboration d'équipe"
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "q1": {
+        "question": "Puis-je changer de plan à tout moment?",
+        "answer": "Oui, vous pouvez mettre à niveau ou rétrograder votre plan à tout moment. Les modifications prennent effet immédiatement et vous serez facturé au prorata."
+      },
+      "q2": {
+        "question": "Y a-t-il une période d'essai gratuite?",
+        "answer": "Le plan gratuit vous donne déjà accès aux fonctionnalités de base. Pour les plans payants, nous offrons une garantie de remboursement de 14 jours."
+      },
+      "q3": {
+        "question": "Quels modes de paiement acceptez-vous?",
+        "answer": "Nous acceptons toutes les principales cartes de crédit, les virements SEPA et PayPal pour une expérience de paiement sécurisée et facile."
+      },
+      "q4": {
+        "question": "Mes données sont-elles en sécurité?",
+        "answer": "Absolument. Nous utilisons une sécurité de niveau entreprise et nous nous conformons à toutes les directives du RGPD pour protéger vos données."
+      }
+    },
+    "cta": {
+      "title": "Prêt à trouver votre quartier idéal?",
+      "subtitle": "Rejoignez des milliers de personnes qui ont déjà trouvé leur quartier idéal avec Buurtinzicht",
+      "startFree": "Commencez gratuitement",
+      "viewDemo": "Voir la démo"
+    }
+  },
+  "footer": {
+    "description": "Découvrez et comparez les quartiers belges avec des analyses détaillées et des informations pour des choix de logement plus intelligents.",
+    "product": {
+      "title": "Produit",
+      "search": "Recherche de Quartier",
+      "compare": "Comparer",
+      "pricing": "Tarifs"
+    },
+    "company": {
+      "title": "Entreprise",
+      "about": "À Propos",
+      "contact": "Contact",
+      "privacy": "Confidentialité"
+    },
+    "copyright": "© 2024 Buurtinzicht. Tous droits réservés."
+  }
+}
