@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from '../../../i18n';
 import { Header } from '../../components/layout/Header';
 import { Footer } from '../../components/layout/Footer';
+import { PWAInstaller } from '../../components/pwa/PWAInstaller';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -34,6 +35,7 @@ export default async function LocaleLayout({
               {children}
             </main>
             <Footer />
+            <PWAInstaller />
           </div>
         </NextIntlClientProvider>
       </body>
