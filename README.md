@@ -24,6 +24,8 @@ Transform how property buyers, renters, and professionals make location-based de
 
 ## 🏗️ Technical Architecture
 
+[\![Architecture Diagram](https://img.shields.io/badge/View_Architecture-Excalidraw-6965db?style=for-the-badge&logo=excalidraw)](https://excalidraw.com/#json=poNdsVGeB_708xHyJEhgs,x12kD74WA0hoR0sQ2e8dUA)
+
 ### Recommended Tech Stack
 
 #### Backend & APIs
