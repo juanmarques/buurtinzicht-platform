@@ -1,4 +1,6 @@
-# 🏘️ Buurtinzicht - Neighborhood Insights System
+# Buurtinzicht - Neighborhood Insights System
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A comprehensive platform for analyzing Belgian neighborhoods through data aggregation, predictive analytics, and community insights.
 
